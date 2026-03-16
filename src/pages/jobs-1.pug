@@ -1,0 +1,78 @@
+extends ../templates/default
+
+include ../components/layout-header/layout-header
+include ../components/department/department
+
+block main
+  include ../components/breadcrumbs/breadcrumbs
+  +title({
+    title: 'Вакансии'
+  })
+  
+  +layout-header({
+    jobs: true,
+    title: 'Работа у нас',
+  })
+
+  include ../components/job-benefits/job-benefits
+
+  +h2({
+    title: 'Вакансии',
+  })
+
+  +direction-tabs({
+    tabs: [
+      {
+        active: true,
+        link: 'Все отделы'
+      },
+      {
+        link: 'Наименование отдела'
+      },
+      {
+        link: 'Наименование отдела'
+      },
+      {
+        link: 'Наименование отдела'
+      },
+      {
+        link: 'Наименование отдела'
+      },
+      {
+        link: 'Наименование отдела'
+      },
+      {
+        link: 'Наименование отдела'
+      },
+      {
+        link: 'Наименование отдела'
+      },
+      {
+        link: 'Наименование отдела'
+      },
+      {
+        link: 'Наименование отдела'
+      },
+      {
+        link: 'Наименование отдела'
+      },
+    ]
+  })
+
+  +department({
+    title: 'Кросс-фит',
+  })
+    include ../components/vacancy-card/vacancy-card
+
+  +department({
+    title: 'Бассейн',
+  })
+    include ../components/vacancy-card/vacancy-card
+    include ../components/vacancy-card/vacancy-card
+
+  +department({
+    title: 'Тренажерный зал',
+  })
+    include ../components/vacancy-card/vacancy-card
+
+  include ../components/bottom-nav/bottom-nav

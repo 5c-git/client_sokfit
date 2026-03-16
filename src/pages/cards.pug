@@ -1,0 +1,14 @@
+extends ../templates/default
+
+block main
+  include ../components/breadcrumbs/breadcrumbs
+  +title({
+    title: 'Клубные карты'
+  })
+
+  +layout({
+    column: true,
+  })
+    include ../components/club-card/club-card
+
+  include ../components/bottom-nav/bottom-nav

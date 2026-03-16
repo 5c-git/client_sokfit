@@ -1,0 +1,126 @@
+extends ../templates/default
+
+include ../components/trainer-card/trainer-card
+
+block main
+  include ../components/breadcrumbs/breadcrumbs
+  +title({
+    title: 'Тренерский состав'
+  })
+
+  +tabs({
+    secondClass: 'tabs--left',
+    tabs: [
+      {
+        link: 'Групповые'
+      },
+      {
+        active: true,
+        link: 'Персональные'
+      },
+      {
+        link: 'Детский клуб'
+      },
+    ]
+  })
+
+  +direction-tabs({
+    tabs: [
+      {
+        link: 'Все категории'
+      },
+      {
+        active: true,
+        link: 'Кросс-фит'
+      },
+      {
+        link: 'Тренажерный зал'
+      },
+      {
+        link: 'Бассейн'
+      },
+      {
+        link: 'Боевые искусства'
+      },
+      {
+        link: 'Другая категория'
+      },
+      {
+        link: 'Другая категория'
+      },
+      {
+        link: 'Другая категория'
+      },
+      {
+        link: 'Другая категория'
+      },
+      {
+        link: 'Другая категория'
+      },
+    ]
+  })
+
+  +layout({
+    grid4: true,
+    pagination: true,
+  })
+    +trainer-card({
+      src: './assets/images/trainer-1.jpg',
+      title: 'Константин Константинович',
+      tabs: true,
+    })
+    +trainer-card({
+      src: './assets/images/trainer-2.jpg',
+      title: 'Алексеев Антон',
+    })
+    +trainer-card({
+      title: 'Сергей Харионов',
+      tabs: true,
+    })
+    +trainer-card({
+      src: './assets/images/trainer-4.jpg',
+      title: 'Брюс Уиллис',
+      tabs: true,
+    })
+    +trainer-card({
+      src: './assets/images/trainer-5.jpg',
+      title: 'Софи Брюссо',
+      tabs: true,
+    })
+    +trainer-card({
+      src: './assets/images/trainer-1.jpg',
+      title: 'Константин Константинович',
+      tabs: true,
+    })
+    +trainer-card({
+      src: './assets/images/trainer-2.jpg',
+      title: 'Алексеев Антон',
+    })
+    +trainer-card({
+      src: './assets/images/trainer-3.jpg',
+      title: 'Сергей Харионов',
+      tabs: true,
+    })
+    +trainer-card({
+      src: './assets/images/trainer-4.jpg',
+      title: 'Брюс Уиллис',
+      tabs: true,
+    })
+    +trainer-card({
+      src: './assets/images/trainer-5.jpg',
+      title: 'Софи Брюссо',
+      tabs: true,
+    })
+    +trainer-card({
+      title: 'Сергей Харионов',
+      tabs: true,
+    })
+    +trainer-card({
+      src: './assets/images/trainer-4.jpg',
+      title: 'Брюс Уиллис',
+      tabs: true,
+    })
+
+  include ../components/help/help
+
+  include ../components/bottom-nav/bottom-nav

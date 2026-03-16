@@ -1,0 +1,13 @@
+mixin workout-card(props)
+  article.workout-card
+    div.workout-card__header
+      a.workout-card__banner
+        if props.src
+          img(src=props.src alt=props.title)
+      button(type='button' data-type='workout' data-id='1').button-request.button.workout-card__registration Записаться
+
+    div.workout-card__info
+      span.workout-card__direction Тренажерный зал
+      span.workout-card__duration 120 минут
+
+    a.workout-card__title=props.title

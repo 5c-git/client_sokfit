@@ -1,0 +1,109 @@
+
+.tabs {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: $Grey_1;
+  white-space: nowrap;
+
+  @media(max-width: $phone) {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  & + .layout {
+    margin-top: 60px;
+
+    @media(max-width: $phone) {
+      margin-top: 24px;
+    }
+  }
+
+  &__wrapper {
+    margin-bottom: -1px;
+
+    @media(max-width: $tablet) {
+      display: flex;
+      margin-right: -30px;
+      margin-left: -30px;
+      padding-right: 30px;
+      padding-left: 30px;
+      overflow-y: hidden;
+      overflow-x: auto;
+    }
+    @media(max-width: $phone) {
+      margin-right: -15px;
+      margin-left: -15px;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &__list {
+    @include Bold_16_Europeext_Upper;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 25px;
+  }
+
+  &__item {
+
+    a {
+      position: relative;
+      display: block;
+      padding-bottom: 15px;
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s;
+
+      &[href] {
+
+        &:hover {
+          @media(min-width: $desktop-only) {
+            color: $Main_2;
+          }
+        }
+      }
+    }
+
+    &--active {
+      color: $Black;
+
+      a {
+
+        &:before {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          height: 2px;
+          background-color: currentcolor;
+          content: '';
+        }
+      }
+    }
+  }
+
+  &__hr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid $Grey_1;
+  }
+
+  &--left {
+
+    .tabs__list {
+      justify-content: flex-start;
+      column-gap: 65px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+extends ../templates/default
+
+include ../components/moving/moving
+
+block main
+  include ../components/start/start
+
+  +layout({})
+    include ../components/request-wrapper/request-wrapper
+
+  include ../components/main-about/main-about
+
+  +moving({
+    ver1: true,
+  })
+
+  include ../components/main-why/main-why
+
+  include ../components/main-services/main-services
+
+  include ../components/alarm/alarm
+
+  include ../components/main-trainers/main-trainers
+
+  include ../components/main-cards/main-cards
+
+  //- +moving({
+  //-   ver2: true,
+  //- })
+
+  include ../components/main-news/main-news
+
+  include ../components/main-questions/main-questions
+
+  include ../components/bottom-nav/bottom-nav

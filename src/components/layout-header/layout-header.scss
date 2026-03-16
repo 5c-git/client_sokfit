@@ -1,0 +1,94 @@
+
+.layout-header {
+  margin-top: 60px;
+  margin-bottom: 150px;
+
+  @media(max-width: $tablet) {
+    margin-top: 40px;
+    margin-bottom: 70px;
+  }
+  @media(max-width: $phone) {
+    margin-top: 24px;
+    margin-bottom: 48px;
+  }
+
+  &__wrapper {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-areas:
+      'title banner'
+      'main banner';
+
+    @media(max-width: $phone) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+    }
+  }
+
+  &__title {
+    @include Bold_40_europeext_upper;
+    margin: 0;
+    grid-area: title;
+  }
+
+  &__main {
+    grid-area: main;
+
+    p {
+      @include Regular_20_Inter;
+      margin: 0;
+
+      &:not(:first-of-type) {
+        margin-top: 15px;
+
+        @media(max-width: $phone) {
+          margin-top: 5px;
+        }
+      }
+    }
+
+    @media(max-width: $phone) {
+      order: 1;
+    }
+  }
+
+  &__delivery {
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+
+    @media(max-width: $phone) {
+      max-width: 288px;
+      margin-top: 16px;
+      grid-template-columns: 1fr;
+      grid-row-gap: 12px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__banner {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    grid-area: banner;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

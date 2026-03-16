@@ -1,0 +1,200 @@
+
+.club-card {
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: 545px 1fr;
+  grid-column-gap: 55px;
+  grid-row-gap: 30px;
+  grid-template-areas:
+    'box main'
+    'button main';
+
+  @media(max-width: $desktop) {
+    grid-template-columns: 450px 1fr;
+  }
+  @media(max-width: $tablet) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'box'
+      'button'
+      'main';
+  }
+  @media(max-width: $phone) {
+    grid-row-gap: 8px;
+  }
+
+  &:nth-child(1) {
+
+    .club-card__box {
+      color: $White;
+      background: $Linear_black;
+
+      &:before {
+        background-image: url('../assets/images/club-card-background--white.svg');
+      }
+    }
+  }
+
+  &:nth-child(2) {
+
+    .club-card__box {
+      color: $White;
+      background: $Linear_grey;
+
+      &:before {
+        background-image: url('../assets/images/club-card-background--white.svg');
+      }
+    }
+  }
+
+  &:nth-child(3) {
+
+    .club-card__box {
+      color: $Black;
+      background: $Light_grey_linear;
+    }
+  }
+
+  &:nth-child(4) {
+
+    .club-card__box {
+      border: 1px solid $Grey_3;
+      color: $Black;
+      background: $White;
+    }
+  }
+
+  .button {
+    width: 100%;
+    margin-top: auto;
+    grid-area: button;
+  }
+
+  &__box {
+    position: relative;
+    display: flex;
+    height: 330px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    border-radius: 15px;
+    color: $Black;
+    transition: transform 0.2s;
+    overflow: hidden;
+    grid-area: box;
+
+    @media(max-width: $phone) {
+      height: 160px;
+      padding-top: 12px;
+      padding-right: 8px;
+      padding-bottom: 12px;
+      padding-left: 8px;
+      border-radius: 10px;
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      right: 30px;
+      bottom: 0;
+      width: 160px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right;
+      background-image: url('../assets/images/club-card-background--black.svg');
+      content: '';
+
+      @media(max-width: $phone) {
+        right: 0;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__title {
+    @include Bold_30_europeext_upper;
+    margin: 0;
+
+    @media(max-width: $phone) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__description {
+    @include Bold_20_Europeext_Upper;
+    margin: 0;
+    color: $Grey_1;
+  }
+
+  &__main {
+    @include Regular_16_Inter;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    grid-area: main;
+
+    @media(max-width: $phone) {
+      margin-top: 8px;
+      font-size: 12px;
+      line-height: 15px;
+      row-gap: 8px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      row-gap: 5px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 18px;
+
+      @media(max-width: $phone) {
+        padding-left: 14px;
+      }
+
+      &:before {
+        position: absolute;
+        left: 0;
+        font-size: 150%;
+        font-weight: 700;
+        content: '•';
+      }
+    }
+  }
+
+  &__time {
+    @include Bold_20_Europeext_Upper;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 10px;
+    column-gap: 20px;
+
+    @media(max-width: $phone) {
+      margin-bottom: 0;
+      font-size: 13px;
+      line-height: 16px;
+      row-gap: 5px;
+    }
+
+    em {
+      font-style: normal;
+      color: $Grey_3;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+
+.title {
+  margin-top: 50px;
+  margin-bottom: 30px;
+
+  @media(max-width: $phone) {
+    margin-top: 32px;
+    margin-bottom: 24px;
+  }
+
+  & + .empty {
+    margin-top: 100px;
+
+    @media(max-width: $tablet) {
+      margin-top: 60px;
+    }
+    @media(max-width: $phone) {
+      margin-top: 40px;
+    }
+  }
+
+  &__main {
+    @include Bold_80_europeext_upper;
+    margin: 0;
+    word-break: break-word;
+  }
+}

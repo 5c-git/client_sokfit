@@ -1,0 +1,47 @@
+footer.footer
+  div.container
+    div.footer__main
+      div.footer__info
+        a(href="#").footer__logo
+          img(src="./assets/images/icon-logo.svg", alt="Логотип.")
+        div.footer__contacts
+          a(href="#").footer__link
+            address г. Самара, ул. Мичурина, 98
+          a(href="tel:+74950000000").footer__link +7 495 000-00-00
+          p.footer__text Будни: 07:00-23:00
+          p.footer__text Выходные и праздники: 09:00-23:00
+
+      nav.footer__nav
+        ul.footer__nav-list 
+          li.footer__nav-item
+            a(href="").footer__link Расписание 
+          li.footer__nav-item
+            a(href="").footer__link Услуги
+          li.footer__nav-item
+            a(href="").footer__link Тренерский состав
+          li.footer__nav-item
+            a(href="").footer__link Новости
+          li.footer__nav-item
+            a(href="").footer__link Клубные карты
+          li.footer__nav-item
+            a(href="").footer__link Залы
+          li.footer__nav-item
+            a(href="").footer__link Кафе
+          li.footer__nav-item
+            a(href="").footer__link Контакты
+          li.footer__nav-item
+            a(href="").footer__link Вакансии
+
+      div.footer__socials
+        +socials({
+          ver1: true,
+        })
+
+    div.footer__bottom
+      p.footer__text &copy; 2022 "СОКФИТ"
+      a(href="#").footer__link Пользовательское соглашение
+      a(href="#").footer__link Политика конфиденциальности
+      a(href="#").footer__link Договор оферты
+      a(href="https://5corners.ru/" target="_blank" rel=" noopener noreferrer" aria-label='Разработка сайта компания 5 углов.').footer__5corners-link Совершенствуемся вместе с 
+        svg(width="77" height="21" viewBox="0 0 77 21" xmlns="http://www.w3.org/2000/svg")
+          use(href="#icon-5corners")

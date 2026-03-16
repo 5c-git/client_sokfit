@@ -1,0 +1,42 @@
+
+.empty {
+  margin-top: 40px;
+  margin-bottom: 150px;
+
+  @media(max-width: $tablet) {
+    margin-bottom: 70px;
+  }
+  @media(max-width: $phone) {
+    margin-top: 24px;
+    margin-bottom: 48px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 100px;
+
+    @media(max-width: $tablet) {
+      column-gap: 60px;
+    }
+    @media(max-width: $phone) {
+      column-gap: 30px;
+    }
+  }
+
+  &__text {
+    @include Bold_20_Europeext_Upper;
+    margin: 0;
+    color: $Grey_1;
+  }
+
+  &__smile {
+    width: auto;
+    height: 180px;
+
+    @media(max-width: $phone) {
+      height: 90px;
+    }
+  }
+}

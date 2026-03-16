@@ -1,0 +1,166 @@
+
+.politics {
+  width: 100%;
+  max-width: 900px;
+
+  & h2:first-child,
+  & h3:first-child,
+  & h4:first-child,
+  & h5:first-child,
+  & h6:first-child,
+  & p:first-child,
+  & b:first-child,
+  & ul:first-child,
+  & ol:first-child,
+  & a:first-child {
+    margin-top: 0;
+  }
+
+  & h2:last-child,
+  & h3:last-child,
+  & h4:last-child,
+  & h5:last-child,
+  & h6:last-child,
+  & p:last-child,
+  & b:last-child,
+  & ul:last-child,
+  & ol:last-child,
+  & a:last-child {
+    margin-bottom: 0;
+  }
+
+  p {
+    @include Regular_20_Inter;
+    margin: 0;
+    margin-top: 16px;
+
+    @media(max-width: $phone) {
+      margin-top: 8px;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: $Main_2;
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+        text-decoration: none;
+      }
+    }
+  }
+
+  b {
+    @include Regular_20_Inter;
+    display: block;
+    margin: 0;
+    margin-top: 16px;
+    font-weight: 700;
+
+    @media(max-width: $phone) {
+      margin-top: 8px;
+    }
+  }
+
+  ol,
+  ul {
+    margin: 0;
+    margin-top: 16px;
+    padding: 0;
+    list-style: none;
+
+    @media(max-width: $phone) {
+      margin-top: 8px;
+    }
+
+    li {
+      margin: 0;
+      margin-top: 16px;
+      padding: 0;
+
+      @media(max-width: $phone) {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: lvl1;
+
+    li {
+      @include Regular_20_Inter;
+      position: relative;
+      counter-increment: lvl1;
+
+      @media(max-width: $phone) {
+        margin-top: 8px;
+      }
+
+      &:before {
+        content: counter(lvl1) '. ';
+      }
+
+      ol {
+        counter-reset: lvl2;
+
+        li {
+          padding-left: 35px;
+          counter-increment: lvl2;
+          font-feature-settings: normal;
+
+          &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: counter(lvl1) '.' counter(lvl2) '. ';
+          }
+
+          ol {
+            margin-left: -35px;
+            counter-reset: lvl3;
+
+            li {
+              padding-left: 45px;
+              counter-increment: lvl3;
+
+              &:before {
+                content: counter(lvl1) '.' counter(lvl2) '.' counter(lvl3) '. ';
+              }
+            }
+          }
+
+          ul {
+            margin-left: -35px;
+
+            li {
+              padding-left: 45px;
+              counter-increment: unset !important;
+
+              &:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '—' !important;
+              }
+            }
+          }
+        }
+      }
+
+      ul {
+
+        li {
+          padding-left: 35px;
+          counter-increment: unset !important;
+
+          &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '—' !important;
+          }
+        }
+      }
+    }
+  }
+}

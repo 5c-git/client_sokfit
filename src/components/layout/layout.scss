@@ -1,0 +1,206 @@
+
+.layout {
+  margin-top: 60px;
+  margin-bottom: 150px;
+
+  @media(max-width: $tablet) {
+    margin-top: 40px;
+    margin-bottom: 70px;
+  }
+  @media(max-width: $phone) {
+    margin-top: 24px;
+    margin-bottom: 48px;
+  }
+
+  .swiper {
+    @media(max-width: $desktop) {
+      margin-right: -30px;
+      margin-left: -30px;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+    @media(max-width: $phone) {
+      margin-right: -15px;
+      margin-left: -15px;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-gap: 60px;
+
+    @media(max-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+    @media(max-width: $phone) {
+      grid-gap: 16px;
+    }
+  }
+
+  &__title {
+    @include Bold_40_europeext_upper;
+    margin: 0;
+  }
+
+  &__list {
+    grid-column: 1 / -1;
+  }
+
+  &__slider-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+  }
+
+  &__slider-item {
+    width: unset !important;
+  }
+
+  &__scrollbar {
+    display: block;
+    height: 4px;
+    margin-top: 40px;
+    border-radius: 4px;
+    background-color: rgba($color: $Black, $alpha: 20%);
+
+    @media(max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__scrollbar-drag {
+    height: 100%;
+    border-radius: 4px;
+    background-color: $Black;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+        background-color: $Main_2;
+      }
+    }
+  }
+
+  &__all {
+    @include Bold_18_Europeext_Upper;
+    margin-bottom: 10px;
+    color: $Black;
+    transition: color 0.3s;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    align-self: end;
+    white-space: nowrap;
+
+    @media(max-width: $tablet) {
+      width: 100%;
+      margin-bottom: unset;
+      padding-top: 16px;
+      padding-right: 25px;
+      padding-bottom: 12px;
+      padding-left: 25px;
+      border-radius: 3px;
+      text-align: center;
+      text-decoration: none;
+      outline: 1px solid $Black;
+      grid-column-start: unset;
+      grid-row-start: unset;
+    }
+    @media(max-width: $phone) {
+      margin-top: 8px;
+    }
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+        color: $Main_2;
+      }
+    }
+  }
+
+  &--slider {
+
+    .layout__slider {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &--grid2 {
+
+    .layout__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 40px;
+
+      @media(max-width: $phone) {
+        grid-template-columns: 1fr;
+        grid-column-gap: 12px;
+        grid-row-gap: 24px;
+      }
+    }
+  }
+
+  &--grid3 {
+    .layout__list {
+      display: grid;
+      // grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      grid-column-gap: 30px;
+      grid-row-gap: 60px;
+
+      @media(max-width: $tablet) {
+        // grid-template-columns: repeat(2, 1fr);
+      }
+      @media(max-width: $phone) {
+        // grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-column-gap: 12px;
+        grid-row-gap: 24px;
+      }
+    }
+  }
+
+  &--grid4 {
+
+    .layout__list {
+      display: grid;
+      // grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-column-gap: 30px;
+      grid-row-gap: 60px;
+
+      @media(max-width: $tablet) {
+        // grid-template-columns: repeat(3, 1fr);
+      }
+      @media(max-width: $phone) {
+        // grid-template-columns: 1fr;
+        grid-column-gap: 12px;
+        grid-row-gap: 24px;
+      }
+    }
+  }
+
+  &--column {
+
+    .layout__list {
+
+      & > article:not(:first-child),
+      & > div:not(:first-child),
+      & > section:not(:first-child) {
+        margin-top: 40px;
+        padding-top: 40px;
+        border-top: 1px solid $Grey_3;
+
+        @media(max-width: $phone) {
+          margin-top: 16px;
+          padding-top: 24px;
+        }
+      }
+    }
+  }
+}

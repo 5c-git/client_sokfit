@@ -1,0 +1,19 @@
+mixin trainer-card(props)
+  article.trainer-card
+    div.trainer-card__header
+      a(href="#").trainer-card__banner
+        if props.src
+          img(src=props.src alt=props.title)
+      button(type='button' data-type='trainer' data-id='1').button-request.button.trainer-card__registration Записаться
+
+    a(href="#").trainer-card__title=props.title
+
+    if props.tabs
+      div.trainer-card__tabs
+        button(type='button').trainer-card__tab Кросс-фит
+        button(type='button').trainer-card__tab Боевые искусства
+        button(type='button').trainer-card__tab Тренажерный зал
+        button(type='button').trainer-card__tab Бассейн
+    else
+      div.trainer-card__tabs
+        button(type='button').trainer-card__tab Боевые искусства

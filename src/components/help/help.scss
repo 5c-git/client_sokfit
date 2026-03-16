@@ -1,0 +1,40 @@
+
+.help {
+  margin-top: 150px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: $White;
+  background-color: $Main;
+
+  @media(max-width: $tablet) {
+    margin-top: 70px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media(max-width: $phone) {
+    margin-top: 48px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__wrapper {
+    text-align: center;
+  }
+
+  &__text {
+    @include Bold_40_europeext_upper;
+    margin: 0;
+
+    em {
+      display: block;
+      font-style: normal;
+      color: $Main_2;
+    }
+
+    & + .button {
+      width: 100%;
+      max-width: 420px;
+      margin-top: 30px;
+    }
+  }
+}

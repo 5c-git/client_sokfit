@@ -1,0 +1,51 @@
+include ../field/field
+include ../checkbox/checkbox
+
+mixin request(props)
+  div.request
+    h2.request__title=props.title
+    form(action="#" method='post').request__form
+      div.request__fields
+        div.request__field
+          +field({
+            type: 'text',
+            name: 'name',
+            id: 'name',
+            placeholder: 'Имя',
+            secondClass: 'validator__required',
+          })
+
+        div.request__field 
+          +field({
+            type: 'tel',
+            name: 'Phone Number',
+            id: 'Phone Number',
+            placeholder: 'Телефон',
+            secondClass: 'validator__phone',
+          })
+
+        div.request__field
+          button(type='submit').button.button--black Отправить
+
+      div.request__legal
+        div.request__legal-check
+          +checkbox({
+            type: 'checkbox',
+            name: 'legal-1',
+            value: 'legal-1',
+            required: true,
+          })
+          p Я соглашаюсь на #[a(href='#' target='_blank') обработку персональных данных ]  согласно  #[a(href='#' target='_blank')  политике конфиденциальности].
+
+        div.request__legal-check
+          +checkbox({
+            type: 'checkbox',
+            name: 'legal-2',
+            value: 'legal-2',
+            required: true,
+          })
+          p Я даю  #[a(href='#' target='_blank')  cогласие ]  на получение информационной и рекламной рассылки.
+        
+        span * сайт собирает персональные данные с помощью сервиса аналитики Яндекс метрика для анализа посещаемости сайта, улучшения его функциональности, таргетинга рекламы
+
+      a(href="#").button Написать в ТГ 

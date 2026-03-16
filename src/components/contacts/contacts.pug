@@ -1,0 +1,19 @@
+section.contacts
+  div.container
+    div.contacts__wrapper
+      div.contacts__block
+        span.contacts__name Адрес
+        p.contacts__text г. Самара
+        p.contacts__text Мичурина, проезд 2 дом 98 подъезд 3 офис 14
+      div.contacts__block
+        span.contacts__name Контакты
+        a(href="tel:+74950000000").contacts__text +7 (495) 000 00 00
+        a(href="mailto:example@mail.ru").contacts__text example@mail.ru
+      div.contacts__block
+        span.contacts__name Часы работы
+        p.contacts__text ПН-ПТ: 07:00-23:00
+        p.contacts__text СБ-ВС: 09:00-23:00
+      div.contacts__socials
+        +socials({
+          ver3: true,
+        })

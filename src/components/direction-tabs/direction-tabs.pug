@@ -1,0 +1,12 @@
+mixin direction-tabs(props)
+  section.direction-tabs
+    div.container
+      div.direction-tabs__wrapper
+        ul.direction-tabs__list
+          each item in props.tabs
+            if item.active
+              li.direction-tabs__item.direction-tabs__item--active
+                a=item.link 
+            else
+              li.direction-tabs__item
+                a(href="#")=item.link 

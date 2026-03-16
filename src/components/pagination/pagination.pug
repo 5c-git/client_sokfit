@@ -1,0 +1,18 @@
+div.pagination
+  ul.pagination__pages
+    li.pagination__page.pagination__page--first
+      a(href='#').pagination__page-link.pagination__page-link--disabled
+        svg(width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg")
+          use(href='#pagination-arrow-left')
+    li.pagination__page
+      a.pagination__page-link.pagination__page-link--active 1
+    li.pagination__page
+      a(href='#').pagination__page-link 2
+    li.pagination__page
+      a(href='#').pagination__page-link ...
+    li.pagination__page
+      a(href='#').pagination__page-link 46
+    li.pagination__page.pagination__page--last
+      a(href='#').pagination__page-link
+        svg(width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg")
+          use(href='#pagination-arrow-right')

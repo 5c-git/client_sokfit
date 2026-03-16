@@ -1,0 +1,43 @@
+
+.socials {
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    column-gap: 15px;
+  }
+
+  &__item {
+    transition:
+      opacity 0.2s ease 0s,
+      transform 0.2s ease 0s;
+
+    @for $i from 1 through 3 {
+      &:nth-of-type(#{4 - $i}) {
+        transition-delay: #{$i * 0.1}s;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $Grey_1;
+    transition: color 0.3s;
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+        color: $Main_2;
+      }
+    }
+
+    svg {
+      display: block;
+      width: 40px;
+      height: 40px;
+      fill: currentcolor;
+    }
+  }
+}

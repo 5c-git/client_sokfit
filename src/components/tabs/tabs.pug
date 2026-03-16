@@ -1,0 +1,13 @@
+mixin tabs(props)
+  section.tabs(class=props.secondClass)
+    div.container
+      div.tabs__wrapper
+        ul.tabs__list
+          each item in props.tabs
+            if item.active
+              li.tabs__item.tabs__item--active
+                a=item.link 
+            else
+              li.tabs__item
+                a(href="#")=item.link 
+      hr.tabs__hr

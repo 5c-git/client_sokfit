@@ -1,0 +1,51 @@
+include ../news-card/news-card
+
+section.main-news
+  div.container
+    div.main-news__wrapper
+      h2.main-news__title Новости
+      div.main-news__list
+        +news-card({
+          big: true,
+          src: './assets/images/image-6.jpg',
+          title: 'Сайкл-марафон 19 декабря',
+        })
+
+        aside.main-news__aside
+          +news-card({
+            small: true,
+            title: 'Соревнования по плаванию',
+          })
+          hr
+          +news-card({
+            small: true,
+            title: 'Аэро-йога для взрослых и детей',
+          })
+          hr
+          +news-card({
+            small: true,
+            title: 'Заголовок новости, который может быть очень и очень длинным',
+          })
+          hr
+          +news-card({
+            small: true,
+            title: 'Заголовок новости, который может быть очень и очень длинным',
+          })
+          hr
+          +news-card({
+            small: true,
+            title: 'Аэро-йога для взрослых и детей',
+          })
+
+        +news-card({
+          src: './assets/images/image-7.jpg',
+          title: 'Аэро-йога для взрослых и детей',
+        })
+        +news-card({
+          src: './assets/images/image-8.jpg',
+          title: 'Соревнования по плаванию',
+        })
+        +news-card({
+          title: 'Заголовок новости, который может быть очень и очень длинным',
+        })
+      a(href="#").main-news__all Смотреть все 

@@ -1,0 +1,68 @@
+include ../trainer-card/trainer-card
+
+section.main-trainers
+  div.container 
+    div.main-trainers__wrapper
+      h2.main-trainers__title Тренерский состав
+      div.main-trainers__slider
+        div.swiper
+          ul.swiper-wrapper.main-trainers__slider-list
+            li.swiper-slide.main-trainers__slider-item
+              +trainer-card({
+                src: './assets/images/trainer-1.jpg',
+                title: 'Константин Константинович',
+                tabs: true,
+              })
+            li.swiper-slide.main-trainers__slider-item
+              +trainer-card({
+                src: './assets/images/trainer-2.jpg',
+                title: 'Алексеев Антон',
+              })
+            li.swiper-slide.main-trainers__slider-item
+              +trainer-card({
+                title: 'Сергей Харионов',
+                tabs: true,
+              })
+            li.swiper-slide.main-trainers__slider-item
+              +trainer-card({
+                src: './assets/images/trainer-4.jpg',
+                title: 'Брюс Уиллис',
+                tabs: true,
+              })
+            li.swiper-slide.main-trainers__slider-item
+              +trainer-card({
+                src: './assets/images/trainer-5.jpg',
+                title: 'Софи Брюссо',
+                tabs: true,
+              })
+            li.swiper-slide.main-trainers__slider-item
+              +trainer-card({
+                src: './assets/images/trainer-1.jpg',
+                title: 'Константин Константинович',
+                tabs: true,
+              })
+            li.swiper-slide.main-trainers__slider-item
+              +trainer-card({
+                src: './assets/images/trainer-2.jpg',
+                title: 'Алексеев Антон',
+              })
+            li.swiper-slide.main-trainers__slider-item
+              +trainer-card({
+                src: './assets/images/trainer-3.jpg',
+                title: 'Сергей Харионов',
+                tabs: true,
+              })
+            li.swiper-slide.main-trainers__slider-item
+              +trainer-card({
+                src: './assets/images/trainer-4.jpg',
+                title: 'Брюс Уиллис',
+                tabs: true,
+              })
+            li.swiper-slide.main-trainers__slider-item
+              +trainer-card({
+                src: './assets/images/trainer-5.jpg',
+                title: 'Софи Брюссо',
+                tabs: true,
+              })
+          div.main-trainers__scrollbar
+      a(href="#").main-trainers__all Смотреть всех

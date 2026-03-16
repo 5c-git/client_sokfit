@@ -1,0 +1,15 @@
+extends ../templates/default
+
+include ../components/empty/empty
+
+block main
+  include ../components/breadcrumbs/breadcrumbs
+  +title({
+    title: 'Новости'
+  })
+
+  +empty({
+    text: 'здесь пока ничего нет',
+  })
+
+  include ../components/bottom-nav/bottom-nav

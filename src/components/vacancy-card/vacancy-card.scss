@@ -1,0 +1,80 @@
+
+.vacancy-card {
+
+  &__link {
+    display: flex;
+    height: 100%;
+    min-height: 144px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    border: 1px solid $Black;
+    border-radius: 6px;
+    text-decoration: none;
+    background-color: $White;
+    transition:
+      background-color 0.3s,
+      border-color 0.3s;
+
+    @media(max-width: $phone) {
+      min-height: unset;
+      padding-top: 12px;
+      padding-right: 12px;
+      padding-bottom: 12px;
+      padding-left: 12px;
+    }
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+        background-color: $Main_2;
+        border-color: $Main_2;
+
+        .vacancy-card__title {
+          color: $White;
+        }
+
+        .vacancy-card__info {
+          color: $Grey_2;
+        }
+      }
+    }
+  }
+
+  &__title {
+    @include Bold_18_Inter_upper;
+    margin: 0;
+    margin-bottom: 24px;
+    color: $Black;
+    transition: color 0.3s;
+
+    @media(max-width: $phone) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__info {
+    @include Med_12_Inter_Upper;
+    display: flex;
+    flex-direction: column;
+    color: $Grey_1;
+    transition: color 0.3s;
+    gap: 2px;
+
+    p {
+      margin: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    ol {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

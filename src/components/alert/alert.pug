@@ -1,0 +1,36 @@
+mixin alert(props)
+
+  if props.error
+    section.alert.alert--error
+      div.alert__container
+        p <b>Заявка не отправлена!</b> <br>Что-то пошло не так, повторите попытку позже.
+      button(type="button" arial-label="Закрыть всплывающее окно").alert__close
+        span
+
+  if props.request
+    section.alert.alert--request
+      div.alert__container
+        p <b>Заявка отправлена!</b> <br>Наш менеджер свяжется с&nbsp;вами и&nbsp;проконсультирует о&nbsp;дальнейших шагах.
+      button(type="button" arial-label="Закрыть всплывающее окно").alert__close
+        span
+
+  if props.wrongtypefile
+    section.alert.alert--wrongtypefile
+      div.alert__container
+        p <b>Неверное расширение файла!</b> <br>Допускается не более 3-х файлов в формате jpeg, .gif, .png, .pdf, .doc, .docx. Размер файлов не более 10 MB.
+      button(type="button" arial-label="Закрыть всплывающее окно").alert__close
+        span
+
+  if props.wrongcountfile
+    section.alert.alert--wrongcountfile
+      div.alert__container
+        p <b>Превышен лимит файлов!</b> <br>Допускается не более 3-х файлов в формате jpeg, .gif, .png, .pdf, .doc, .docx. Размер файлов не более 10 MB.
+      button(type="button" arial-label="Закрыть всплывающее окно").alert__close
+        span
+
+  if props.copy
+    section.alert.alert--copy
+      div.alert__container
+        p <b>Ссылка скопирована</b>
+      button(type="button" arial-label="Закрыть всплывающее окно").alert__close
+        span

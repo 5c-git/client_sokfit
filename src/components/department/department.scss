@@ -1,0 +1,37 @@
+
+.department {
+  margin-top: 60px;
+  margin-bottom: 100px;
+
+  @media(max-width: $phone) {
+    margin-top: 24px;
+    margin-bottom: 48px;
+  }
+
+  &__title {
+    @include Bold_40_europeext_upper;
+    margin: 0;
+    margin-bottom: 30px;
+
+    @media(max-width: $phone) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    grid-gap: 30px;
+
+    @media(max-width: $tablet) {
+      // grid-template-columns: repeat(2, 1fr);
+    }
+    @media(max-width: $phone) {
+      // grid-template-columns: 1fr;
+      // grid-gap: 24px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-gap: 12px;
+    }
+  }
+}

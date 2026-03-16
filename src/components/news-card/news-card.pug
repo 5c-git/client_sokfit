@@ -1,0 +1,24 @@
+mixin news-card(props)
+  if props.big
+    article.news-card.news-card--big
+      a(href="#").news-card__banner
+        if props.src
+          img(src=props.src alt=props.title)
+      div.news-card__main
+        time(datetime='2022-07-07').news-card__time 07.07.2022
+        a(href="#").news-card__title=props.title
+
+  else if props.small
+    article.news-card.news-card--small
+      div.news-card__main
+        time(datetime='2022-07-07').news-card__time 07.07.2022
+        a(href="#").news-card__title=props.title
+
+  else
+    article.news-card
+      a(href="#").news-card__banner
+        if props.src
+          img(src=props.src alt=props.title)
+      div.news-card__main
+        time(datetime='2022-07-07').news-card__time 07.07.2022
+        a(href="#").news-card__title=props.title

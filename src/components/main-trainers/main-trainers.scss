@@ -1,0 +1,128 @@
+
+.main-trainers {
+  margin-top: 150px;
+  margin-bottom: 150px;
+
+  @media(max-width: $tablet) {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+  @media(max-width: $phone) {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+
+  .swiper {
+    @media(max-width: $desktop) {
+      margin-right: -30px;
+      margin-left: -30px;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+    @media(max-width: $phone) {
+      margin-right: -15px;
+      margin-left: -15px;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-gap: 60px;
+    grid-template-columns: 1fr min-content;
+
+    @media(max-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+    @media(max-width: $phone) {
+      grid-gap: 16px;
+    }
+  }
+
+  &__title {
+    @include Bold_60_europeext_upper;
+    max-width: 700px;
+    margin: 0;
+  }
+
+  &__slider {
+    grid-column: 1 / -1;
+  }
+
+  &__slider-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+  }
+
+  &__slider-item {
+    width: unset !important;
+  }
+
+  &__scrollbar {
+    display: block;
+    height: 4px;
+    margin-top: 40px;
+    border-radius: 4px;
+    background-color: rgba($color: $Black, $alpha: 20%);
+
+    @media(max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__scrollbar-drag {
+    height: 100%;
+    border-radius: 4px;
+    background-color: $Black;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+        background-color: $Main_2;
+      }
+    }
+  }
+
+  &__all {
+    @include Bold_18_Europeext_Upper;
+    margin-bottom: 10px;
+    color: $Black;
+    transition: color 0.3s;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    align-self: end;
+    white-space: nowrap;
+
+    @media(max-width: $tablet) {
+      width: 100%;
+      margin-bottom: unset;
+      padding-top: 16px;
+      padding-right: 25px;
+      padding-bottom: 12px;
+      padding-left: 25px;
+      border-radius: 3px;
+      text-align: center;
+      text-decoration: none;
+      outline: 1px solid $Black;
+      grid-column-start: unset;
+      grid-row-start: unset;
+    }
+    @media(max-width: $phone) {
+      margin-top: 8px;
+      color: $White;
+      background-color: $Black;
+    }
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+        color: $Main_2;
+      }
+    }
+  }
+}

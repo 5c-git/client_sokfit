@@ -1,0 +1,142 @@
+.checkbox {
+  display: flex;
+  user-select: none;
+
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+
+
+        &:has(input[type='checkbox']) {
+          .checkbox__box {}
+        }
+      }
+    }
+
+    &:has(.validator__input--error) {
+      .checkbox__box {
+        // border-color: $Error !important;
+        outline: 2px solid $Error !important;
+        outline-offset: -2px;
+      }
+    }
+  }
+
+  &:has(:checked) {
+
+    .checkbox {
+
+      &__box {
+        color: $Main_2;
+      }
+    }
+  }
+
+  &__box {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-bottom: auto;
+    color: $Grey_1;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    background-color: transparent;
+    transition:
+      background-color 0.3s,
+      border 0.3s;
+    flex-shrink: 0;
+    order: -1;
+
+    @media(max-width: $phone) {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:before {
+      transition: border 0.3s;
+    }
+  }
+
+  input[type='checkbox'] {
+
+    &:checked {
+
+      &+.checkbox__box {
+        background-color: currentColor;
+        border-color: currentColor;
+
+        &:before {
+          position: absolute;
+          top: 3px;
+          left: 7px;
+          width: 7px;
+          height: 12px;
+          border-right: 2px solid #ffffff;
+          border-bottom: 2px solid #ffffff;
+          transform: rotate(45deg);
+          content: '';
+
+          @media(max-width: $phone) {
+            top: 2px;
+            left: 6px;
+            width: 6px;
+            height: 11px;
+          }
+        }
+      }
+    }
+  }
+
+  input[type='radio'] {
+
+    &:checked {
+
+      &+.checkbox__box {
+
+        &:before {
+          background-color: currentColor;
+          border: 5px solid #ffffff;
+
+          @media(max-width: $phone) {
+            border-width: 4px;
+          }
+        }
+      }
+    }
+
+
+    &+.checkbox__box {
+      border-radius: 50%;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        will-change: border-width;
+        content: '';
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 34px;
+
+    @media(max-width: $phone) {
+      padding-left: 30px;
+    }
+  }
+}

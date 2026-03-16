@@ -1,0 +1,26 @@
+include ../map/map
+
+section.contacts-map
+  div.container
+    div.contacts-map__nav
+      ul.contacts-map__list
+        li.contacts-map__item
+          a(href="#").contacts-map__link Яндекс.Навигатор 
+        li.contacts-map__item
+          a(href="#").contacts-map__link Яндекс.Карты
+        li.contacts-map__item
+          a(href="#").contacts-map__link Google Maps
+        li.contacts-map__item
+          a(href="#").contacts-map__link 2GIS
+      button(type='button').contacts-map__copy
+        svg(width="34" height="34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg")
+          use(href='#icon-copy')
+        span Копировать ссылку
+
+  div.contacts-map__main
+    +map({
+      x: '59.962971',
+      y: '30.334360',
+      name: 'Адрес офиса:',
+      hint: 'г. Санкт-Петербург, ул. Петроградская Набережная 36А, БЦ «Линкор», офис 376',
+    })

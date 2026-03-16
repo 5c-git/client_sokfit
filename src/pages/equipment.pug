@@ -1,0 +1,49 @@
+extends ../templates/default
+
+block main
+  include ../components/breadcrumbs/breadcrumbs
+  +title({
+    title: 'Оборудование и тренажеры'
+  })
+
+  +direction-tabs({
+    tabs: [
+      {
+        active: true,
+        link: 'Кросс-фит'
+      },
+      {
+        link: 'Тренажерный зал'
+      },
+      {
+        link: 'Бассейн'
+      },
+      {
+        link: 'Боевые искусства'
+      },
+      {
+        link: 'Другая категория'
+      },
+      {
+        link: 'Другая категория'
+      },
+      {
+        link: 'Другая категория'
+      },
+      {
+        link: 'Другая категория'
+      },
+      {
+        link: 'Другая категория'
+      },
+    ]
+  })
+
+  include ../components/equipment/equipment
+
+  +layout({})
+    +article({
+      equipment: true,
+    })
+
+  include ../components/bottom-nav/bottom-nav

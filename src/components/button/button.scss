@@ -1,0 +1,70 @@
+
+.button {
+  @include Bold_18_Europeext_Upper;
+  display: inline-grid;
+  min-height: 50px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding-top: 16px;
+  padding-right: 25px;
+  padding-bottom: 12px;
+  padding-left: 25px;
+  border: 0;
+  border-radius: 3px;
+  text-decoration: none;
+  color: $Black;
+  background-color: $White;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    outline-color 0.3s;
+  outline: 1px solid $Black;
+  outline-offset: -1px;
+  grid-auto-flow: column;
+  grid-column-gap: 5px;
+  flex-shrink: 0;
+  cursor: pointer;
+
+  @media(max-width: $tablet) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  @media(max-width: $phone) {
+    min-height: 48px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  &:disabled {
+    color: $Grey_3;
+    border-color: $Grey_1;
+    outline-color: transparent;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):hover {
+    @media(min-width: $desktop-only) {
+      color: $White;
+      background-color: $Main_2;
+    }
+  }
+
+  svg {
+    fill: currentcolor;
+    stroke: currentcolor;
+  }
+
+  &--transparent {
+
+    &:not(:disabled):hover {
+      @media(min-width: $desktop-only) {
+      }
+    }
+  }
+
+  &--black {
+    color: $White;
+    background-color: $Black;
+  }
+}

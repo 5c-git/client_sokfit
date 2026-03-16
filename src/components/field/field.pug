@@ -1,0 +1,187 @@
+mixin field(props)
+  div.field(class=props.mixin)
+  
+    label(for=props.id).validator__description.field__label!=props.label
+
+    div.field__inner
+      if props.select
+        select(
+          name=props.name
+          id=props.id
+          class=props.secondClass
+          data-search=props.search
+          required=props.required
+        ).field__input.field__input--select
+          each option in props.options
+            option(
+              value=option.value
+              selected=option.selected
+            )=option.text
+
+      else if props.selectTime
+        select(
+          name=props.name
+          id=props.id
+          class=props.secondClass
+          data-search=props.search
+          required=props.required
+        ).field__input.field__input--select
+          option(value)=props.placeholder
+          option(value="09:00") 09:00
+          option(value="10:00") 10:00
+          option(value="11:00") 11:00
+          option(value="12:00") 12:00
+          option(value="13:00") 13:00
+          option(value="15:00") 15:00
+          option(value="16:00") 16:00
+          option(value="17:00") 17:00
+
+      else if props.timeRequest
+        select(
+          name=props.name
+          id=props.id
+          class=props.secondClass
+          data-search=props.search
+          data-request-id='05'
+          required=props.required
+        ).field__input.field__input--time-request
+          option(value)=props.placeholder
+
+      else if props.textarea
+        textarea(
+          name=props.name
+          id=props.id
+          minlength=props.minlength
+          maxlength=props.maxlength
+          autocomplete='off'
+          autocapitalize='off'
+          placeholder=props.placeholder
+          value=props.value
+          class=props.secondClass
+          disabled=props.disabled
+          required=props.required
+          readonly=props.readonly
+        ).field__input=props.value
+
+      else if props.checkbox
+        label.validator__description.field__checkbox-label
+          if props.text
+            span!=props.text
+          input(
+            type='checkbox'
+            name=props.name
+            data-name=props.dataname
+            id=props.id
+            class=props.secondClass
+            data-bouncer-match=props.match
+            disabled=props.disabled
+            required=props.required
+            checked=props.checked
+          ).visually-hidden
+          span.field__box
+      
+      else if props.radio
+        span.field__checkbox-legend=props.title
+        div.field__checkbox-fields
+          each label in props.labels
+            label.field__checkbox-label
+              if label.text
+                span!=label.text
+              input(
+                type='radio'
+                name=props.name
+                id=label.id
+                value=label.value
+                disabled=label.disabled
+                required=label.required
+                checked=label.checked
+              ).visually-hidden
+              span.field__box
+
+      else if props.date
+        input(
+          type='text'
+          name=props.name
+          id=props.id
+          autocomplete='off'
+          autocapitalize='off'
+          placeholder=props.placeholder
+          value=props.value
+          class=props.secondClass
+          data-bouncer-match=props.match
+          data-min-date=props.mindate
+          data-max-date=props.maxdate
+          data-disable-dates="29.12.2024,30.12.2024,31.12.2024,01.01.2025,02.01.2025,03.01.2025,04.01.2025,05.01.2025,06.01.2025,07.01.2025,08.01.2025",
+          data-enable-dates="28.12.2024,25.01.2025",
+          disabled=props.disabled
+        ).field__input.field__input--date
+
+      else if props.dateRequest
+        input(
+          type='text'
+          name=props.name
+          id=props.id
+          autocomplete='off'
+          autocapitalize='off'
+          placeholder=props.placeholder
+          value=props.value
+          class=props.secondClass
+          data-bouncer-match=props.match
+          data-min-date=props.mindate
+          data-max-date=props.maxdate
+          data-disable-dates="29.12.2024,30.12.2024,31.12.2024,01.01.2025,02.01.2025,03.01.2025,04.01.2025,05.01.2025,06.01.2025,07.01.2025,08.01.2025",
+          data-enable-dates="28.12.2024,25.01.2025",
+          data-request-id='05',
+          disabled=props.disabled
+        ).field__input.field__input--date-request
+
+      else if props.time
+        input(
+          type='text'
+          name=props.name
+          id=props.id
+          autocomplete='off'
+          autocapitalize='off'
+          placeholder=props.placeholder
+          value=props.value
+          class=props.secondClass
+          data-bouncer-match=props.match
+          data-min-time=props.mintime
+          data-max-time=props.maxtime
+          disabled=props.disabled
+          readonly=props.readonly
+        ).field__input.field__input--time
+
+      else
+      
+        input(
+          type=props.type 
+          inputmode=props.inputmode
+          name=props.name
+          id=props.id
+          minlength=props.minlength
+          maxlength=props.maxlength
+          autocomplete='off'
+          autocapitalize='off'
+          placeholder=props.placeholder
+          value=props.value
+          class=props.secondClass
+          data-bouncer-match=props.match
+          data-min-time=props.mintime
+          data-max-time=props.maxtime
+          data-min-date=props.mindate
+          data-max-date=props.maxdate
+          disabled=props.disabled
+          required=props.required
+          readonly=props.readonly
+          data-bouncer-target=props.bouncerTarget
+        ).field__input
+
+      if props.eye
+        button(type='button').validator__eye.field__eye
+
+      if props.clear
+        button(type='button' aria-label='Очистить поле').field__clear
+          span
+
+    div(id=props.target).validator__error-container.field__error

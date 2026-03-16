@@ -1,0 +1,149 @@
+extends ../templates/default
+
+include ../components/layout-header/layout-header
+include ../components/menu/menu
+include ../components/food-card/food-card
+
+block main
+  include ../components/breadcrumbs/breadcrumbs
+  +title({
+    title: 'Услуги'
+  })
+
+  +tabs({
+    tabs: [
+      {
+        link: 'Персональные тренировки'
+      },
+      {
+        link: 'Групповые программы'
+      },
+      {
+        link: 'Детский клуб'
+      },
+      {
+        active: true,
+        link: 'Кафе'
+      },
+      {
+        link: 'СПА'
+      },
+    ]
+  })
+  
+  +layout-header({
+    menu: true,
+    title: 'кафе',
+  })
+
+  +h2({
+    title: 'Меню',
+  })
+
+  +tabs({
+    tabs: [
+      {
+        link: 'Завтраки'
+      },
+      {
+        link: 'Обеды'
+      },
+      {
+        link: 'Ужины'
+      },
+      {
+        active: true,
+        link: 'Снеки'
+      },
+      {
+        link: 'Напитки'
+      },
+      {
+        link: 'Десерты'
+      },
+      {
+        link: 'Спортивные добавки'
+      },
+    ]
+  })
+
+  +menu({
+    title: 'Горячие блюда',
+  })
+    +food-card({
+      src: './assets/images/food-1.jpg',
+      title: 'Название блюда, которое может быть длинным',
+      price: '500 ₽',
+    })
+    +food-card({
+      src: './assets/images/food-2.jpg',
+      title: 'Зутраан Сай',
+      price: '1 200 ₽',
+    })
+    +food-card({
+      src: './assets/images/food-1.jpg',
+      title: 'Бухэлеэр',
+      price: '2 100 ₽',
+    })
+    +food-card({
+      src: './assets/images/food-3.jpg',
+      title: 'Казы Казы',
+      price: '2 100 ₽',
+    })
+    +food-card({
+      src: './assets/images/food-1.jpg',
+      title: 'Бесбармак',
+      price: '800 ₽',
+    })
+    +food-card({
+      src: './assets/images/food-3.jpg',
+      title: 'Эчпочмаки',
+      price: '500 ₽',
+    })
+    +food-card({
+      src: './assets/images/food-2.jpg',
+      title: 'Азу из говядины',
+      price: '2 500 ₽',
+    })
+
+  +menu({
+    title: 'Салаты',
+  })
+    +food-card({
+      src: './assets/images/food-3.jpg',
+      title: 'Казы Казы',
+      price: '2 100 ₽',
+    })
+    +food-card({
+      src: './assets/images/food-1.jpg',
+      title: 'Бесбармак',
+      price: '800 ₽',
+    })
+    +food-card({
+      src: './assets/images/food-3.jpg',
+      title: 'Эчпочмаки',
+      price: '500 ₽',
+    })
+    +food-card({
+      src: './assets/images/food-2.jpg',
+      title: 'Азу из говядины',
+      price: '2 500 ₽',
+    })
+
+  +menu({
+    title: 'Супы',
+  })
+    +food-card({
+      src: './assets/images/food-2.jpg',
+      title: 'Зутраан Сай',
+      price: '1 200 ₽',
+    })
+    +food-card({
+      src: './assets/images/food-1.jpg',
+      title: 'Бухэлеэр',
+      price: '2 100 ₽',
+    })
+
+  include ../components/help/help
+
+  include ../components/bottom-nav/bottom-nav

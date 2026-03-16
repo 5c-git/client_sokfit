@@ -1,0 +1,164 @@
+
+.footer {
+  border-top: 1px solid $Grey_1;
+  color: $Black;
+  background-color: $White;
+
+  address {
+    font-style: normal;
+  }
+
+  &__main {
+    display: grid;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    grid-template-areas:
+      'info nav'
+      'info socials';
+    grid-template-rows: min-content 1fr;
+    column-count: auto;
+    grid-gap: 30px;
+
+    @media(max-width: $tablet) {
+      grid-template-areas:
+        'info nav'
+        'socials nav';
+      grid-template-rows: 1fr min-content;
+    }
+    @media(max-width: $phone) {
+      padding-top: 32px;
+      padding-bottom: 24px;
+      grid-template-areas:
+        'info'
+        'nav'
+        'socials';
+      grid-template-rows: unset;
+      grid-gap: 24px;
+    }
+  }
+
+  &__info {
+    @include Regular_14_Inter;
+    grid-area: info;
+
+    @media(max-width: $tablet) {
+    }
+  }
+
+  &__logo {
+    display: block;
+    width: 100px;
+    margin-bottom: 40px;
+
+    @media(max-width: $tablet) {
+      margin-bottom: 24px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+
+    @media(max-width: $phone) {
+      row-gap: 8px;
+    }
+  }
+
+  &__nav {
+    grid-area: nav;
+  }
+
+  &__nav-list {
+    @include Regular_17_Inter_Upper;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: 1fr 1fr max-content;
+    grid-gap: 15px;
+
+    @media(max-width: $tablet) {
+      grid-template-columns: 1fr max-content;
+    }
+    @media(max-width: $phone) {
+      grid-template-columns: 1fr;
+      grid-gap: 12px;
+    }
+  }
+
+  &__socials {
+    justify-self: flex-end;
+    align-self: flex-end;
+    grid-area: socials;
+
+    @media(max-width: $tablet) {
+      justify-self: flex-start;
+      align-self: flex-end;
+    }
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  &__link {
+    margin: 0;
+    text-decoration: none;
+    color: currentcolor;
+    transition: color 0.3s;
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+        color: $Main_2;
+      }
+    }
+
+    svg {
+      fill: currentcolor;
+    }
+  }
+
+  &__5corners-link {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: currentcolor;
+    transition: color 0.3s;
+    gap: 5px;
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+        color: $Main_2;
+      }
+    }
+
+    svg {
+      fill: currentcolor;
+    }
+  }
+
+  &__bottom {
+    @include Med_12_Inter_Upper;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    column-gap: 30px;
+    row-gap: 15px;
+
+    @media(max-width: $phone) {
+      padding-top: unset;
+    }
+  }
+}

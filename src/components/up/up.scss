@@ -1,0 +1,54 @@
+
+.up {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: $Grey_3;
+  transition:
+    visibility 0.3s,
+    opacity 0.3s,
+    color 0.3s;
+  visibility: hidden;
+  opacity: 0;
+  background: 0;
+  outline: none;
+  cursor: pointer;
+
+  @media(max-width: $phone) {
+    right: 16px;
+    bottom: 24px;
+    width: 40px;
+    height: 40px;
+    color: $Main_2;
+  }
+
+  &:hover {
+    @media(min-width: $desktop-only) {
+      color: $Main_2;
+    }
+  }
+
+  svg {
+    display: block;
+    width: 60px;
+    height: 60px;
+    fill: currentcolor;
+    stroke: currentcolor;
+
+    @media(max-width: $phone) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &--visible {
+    visibility: visible;
+    opacity: 1;
+  }
+}

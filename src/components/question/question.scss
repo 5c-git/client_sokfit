@@ -1,0 +1,85 @@
+
+.question {
+  overflow: hidden;
+  grid-column: 1 / -1;
+
+  &__header {
+    position: relative;
+    padding-right: 40px;
+    transition: color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+        color: $Main_2;
+      }
+    }
+
+    &:after {
+      position: absolute;
+      top: 13px;
+      right: 10px;
+      width: 18px;
+      height: 2px;
+      background-color: currentcolor;
+      transition:
+        transform 0.3s,
+        background-color 0.3s;
+      transform-origin: 50% 50%;
+      transform: rotate(0deg);
+      content: '';
+
+      @media(max-width: $phone) {
+        top: 8px;
+        width: 14px;
+      }
+    }
+
+    &:before {
+      position: absolute;
+      top: 13px;
+      right: 10px;
+      width: 18px;
+      height: 2px;
+      background-color: currentcolor;
+      transition:
+        transform 0.3s,
+        background-color 0.3s;
+      transform-origin: 50% 50%;
+      transform: rotate(90deg);
+      content: '';
+
+      @media(max-width: $phone) {
+        top: 8px;
+        width: 14px;
+      }
+    }
+  }
+
+  &__title {
+    @include Bold_20_Europeext_Upper;
+    margin: 0;
+
+    @media(max-width: $phone) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  &__answer {
+    padding-top: 15px;
+
+    @media(max-width: $phone) {
+      padding-top: 5px;
+    }
+
+    p {
+      @include Regular_20_Inter;
+      margin: 0;
+
+      &:not(:first-of-type) {
+        margin-top: 8px;
+      }
+    }
+  }
+}

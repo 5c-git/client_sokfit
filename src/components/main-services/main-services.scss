@@ -1,0 +1,148 @@
+
+.main-services {
+  margin-top: 150px;
+  margin-bottom: 150px;
+
+  @media(max-width: $tablet) {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+  @media(max-width: $phone) {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+
+  &__title {
+    @include Bold_60_europeext_upper;
+    margin: 0;
+    margin-bottom: 60px;
+
+    @media(max-width: $phone) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(21, 1fr);
+    grid-gap: 30px;
+
+    @media(max-width: $tablet) {
+      grid-gap: 8px;
+    }
+  }
+
+  &__item {
+    min-height: 450px;
+    grid-column: span 8;
+
+    @media(max-width: $phone) {
+      min-height: 175px;
+    }
+
+    &:nth-child(1) {
+      grid-column: span 13;
+    }
+
+    &:nth-child(3) {
+      grid-column: span 21;
+    }
+
+    &:nth-child(5) {
+      grid-column: span 13;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    height: 100%;
+    padding: 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: $Black;
+    background-color: $Grey_4;
+    overflow: hidden;
+
+    @media(max-width: $tablet) {
+
+    }
+    @media(max-width: $phone) {
+      padding-top: 12px;
+      padding-right: 8px;
+      padding-left: 8px;
+    }
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+
+        &:before {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
+    &:before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 105px;
+      height: 105px;
+      border-radius: 5px;
+      background-repeat: no-repeat;
+      background-size: 55px;
+      background-position: center;
+      background-color: $White;
+      background-image: url('../assets/images/icon-arrow-link.svg');
+      transition:
+        visibility 0.3s,
+        opacity 0.3s;
+      visibility: hidden;
+      opacity: 0;
+      content: '';
+    }
+  }
+
+  &__name {
+    @include Bold_40_europeext_upper;
+    max-width: 490px;
+    margin: 0;
+
+    @media(max-width: $tablet) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+    @media(max-width: $phone) {
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+
+  &__banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+
+    @media(max-width: $tablet) {
+      top: 60px;
+    }
+    @media(max-width: $phone) {
+      top: 0;
+    }
+
+    img {
+      display: block;
+      width: auto;
+      height: 100%;
+    }
+  }
+}

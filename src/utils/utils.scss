@@ -1,0 +1,456 @@
+/* stylelint-disable */
+@mixin zero {
+  padding: 0;
+  margin: 0;
+}
+
+$main-font: 'Inter';
+$title-font: 'EuropeExt';
+$icon-font: 'icon';
+
+$White: #FFFFFF;
+$Black: #000000;
+$Main: #36373C;
+$Main_2: #5BC357;
+$Grey_1: #ACACAC;
+$Grey_2: #DBDBDB;
+$Grey_3: #7A7A7A;
+$Grey_4: #F6F6F6;
+$Error: #D60202;
+$Transparent_white: rgba(255, 255, 255, 0.75);
+$Delivery_Club: #5BC357;
+$Delivery_Club_Hover: #4CA748;
+$Yandex_Eda: #FAE15A;
+$Yandex_Eda_Hover: #E4CD51;
+$Linear_grey: linear-gradient(86.91deg, #888B8E 3.82%, #646B72 85.23%);
+$Light_grey_linear: linear-gradient(89.83deg, #E6E6E6 0.16%, #B5B5B5 99.87%);
+$Linear_black: linear-gradient(80.85deg, #4E4E4E 3.22%, #0A0A0A 95.94%);
+$Linear_black_Cover: linear-gradient(180deg, #232426 27.5%, #36373B 92.63%);
+$Linear_Orange: linear-gradient(196.7deg, #CB3918 4.62%, #F45C3B 88.46%);
+
+$desktop: 1260px;
+$tablet: 991px;
+$desktop-only: $tablet + 1;
+$phone: 767px;
+/* stylelint-enable */
+
+
+// fonts settings
+@mixin Bold_italic_130_europeext_upper {
+  font-family: $title-font;
+  font-size: 130px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 140px;
+  text-transform: uppercase;
+
+  @media(max-width: $desktop) {
+    font-size: 100px;
+    line-height: 120px;
+  }
+  @media(max-width: $tablet) {
+    font-size: 70px;
+    line-height: 84px;
+  }
+  @media(max-width: $phone) {
+    font-size: 32px;
+    line-height: 37px;
+  }
+}
+@mixin Bold_italic_100_europeext_upper {
+  font-family: $title-font;
+  font-size: 100px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 110px;
+  text-transform: uppercase;
+
+  @media(max-width: $phone) {
+    font-size: 50px;
+    line-height: 56px;
+  }
+}
+@mixin Bold_italic_80_europeext_upper {
+  font-family: $title-font;
+  font-size: 80px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 100px;
+  text-transform: uppercase;
+
+  @media(max-width: $tablet) {
+    font-size: 60px;
+    line-height: 68px;
+  }
+  @media(max-width: $phone) {
+    font-size: 32px;
+    line-height: 37px;
+  }
+}
+@mixin Bold_80_europeext_upper {
+  font-family: $title-font;
+  font-size: 80px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 90px;
+  text-transform: uppercase;
+
+  @media(max-width: $phone) {
+    font-size: 32px;
+    line-height: 37px;
+  }
+}
+@mixin Bold_60_europeext_upper {
+  font-family: $title-font;
+  font-size: 60px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 68px;
+  text-transform: uppercase;
+
+  @media(max-width: $phone) {
+    font-size: 25px;
+    line-height: 29px;
+  }
+}
+@mixin Bold_italic_60_europeext_upper {
+  font-family: $title-font;
+  font-size: 60px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 68px;
+  text-transform: uppercase;
+
+  @media(max-width: $phone) {
+    font-size: 25px;
+    line-height: 29px;
+  }
+}
+@mixin Bold_italic_50_europeext_upper {
+  font-family: $title-font;
+  font-size: 50px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 56px;
+  text-transform: uppercase;
+}
+@mixin Bold_40_europeext_upper {
+  font-family: $title-font;
+  font-size: 40px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 46px;
+  text-transform: uppercase;
+
+  @media(max-width: $phone) {
+    font-size: 25px;
+    line-height: 29px;
+  }
+}
+@mixin Bold_32_europeext_upper {
+  font-family: $title-font;
+  font-size: 32px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+@mixin Bold_30_europeext_upper {
+  font-family: $title-font;
+  font-size: 30px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 38px;
+  text-transform: uppercase;
+
+  @media(max-width: $phone) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+@mixin Regular_30_europeext_upper {
+  font-family: $title-font;
+  font-size: 30px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 38px;
+  text-transform: uppercase;
+
+  @media(max-width: $phone) {
+    font-size: 30px;
+    line-height: 38px;
+  }
+}
+@mixin Bold_28_europeext_upper {
+  font-family: $title-font;
+  font-size: 28px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+@mixin Bold_italic_28_europeext_upper {
+  font-family: $title-font;
+  font-size: 28px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+@mixin Regular_25_Inter {
+  font-family: $main-font;
+  font-size: 25px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 34px;
+
+  @media(max-width: $phone) {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+@mixin Med_25_Inter_upper {
+  font-family: $main-font;
+  font-size: 25px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 34px;
+  text-transform: uppercase;
+}
+@mixin Bold_25_Europeext_upper {
+  font-family: $title-font;
+  font-size: 25px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 29px;
+  text-transform: uppercase;
+}
+@mixin Bold_22_Europeext_Upper {
+  font-family: $title-font;
+  font-size: 22px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+@mixin Bold_italic_22_Europeext_upper {
+  font-family: $title-font;
+  font-size: 22px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+@mixin Regular_20_Inter_Underline {
+  font-family: $main-font;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 25px;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+}
+@mixin Bold_Italic_20_Europeext_upper {
+  font-family: $title-font;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+@mixin Bold_20_Europeext_Upper {
+  font-family: $title-font;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  @media(max-width: $phone) {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+@mixin Regular_20_Inter {
+  font-family: $main-font;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 25px;
+
+  @media(max-width: $phone) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+@mixin Bold_18_Inter_upper {
+  font-family: $main-font;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+@mixin Bold_18_Europeext_Upper {
+  font-family: $title-font;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 23px;
+  text-transform: uppercase;
+
+  @media(max-width: $phone) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@mixin Regular_17_Inter_Upper {
+  font-family: $main-font;
+  font-size: 17px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+@mixin Regular_16_Inter_Underline {
+  font-family: $main-font;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 25px;
+  text-decoration-line: underline;
+}
+@mixin Regular_16_Inter {
+  font-family: $main-font;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 25px;
+}
+@mixin Bold_16_Europeext_Upper {
+  font-family: $title-font;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  @media(max-width: $phone) {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+@mixin Bold_14_Europeext_Upper {
+  font-family: $title-font;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+@mixin Regular_14_Inter_Underline {
+  font-family: $main-font;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 17px;
+  text-decoration-line: underline;
+
+  @media(max-width: $phone) {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+@mixin Med_14_Inter_Upper {
+  font-family: $main-font;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 17px;
+  text-transform: uppercase;
+
+  @media(max-width: $phone) {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+@mixin Regular_14_Inter {
+  font-family: $main-font;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 17px;
+
+  @media(max-width: $phone) {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+@mixin Regular_13_EuropeExt_Upper {
+  font-family: $title-font;
+  font-size: 13px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+@mixin Bold_13_EuropeExt_Upper {
+  font-family: $title-font;
+  font-size: 13px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+@mixin Bold_12_Inter_Upper {
+  font-family: $main-font;
+  font-size: 12px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+@mixin Med_12_Inter_Upper {
+  font-family: $main-font;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  @media(max-width: $phone) {
+    font-size: 11px;
+    line-height: 15px;
+  }
+}
+@mixin Bold_12_Upper_EuropeExt {
+  font-family: $title-font;
+  font-size: 12px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+@mixin Reg_12_Inter {
+  font-family: $main-font;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 18px;
+}
+@mixin Med_11_Inter_Upper {
+  font-family: $main-font;
+  font-size: 11px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+@mixin Med_8_inter_Upper {
+  font-family: $main-font;
+  font-size: 8px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 11px;
+  text-transform: uppercase;
+}

@@ -1,0 +1,17 @@
+extends ../templates/default
+
+block main
+  include ../components/breadcrumbs/breadcrumbs
+
+  include ../components/back/back
+
+  +article-title({
+    title: 'Наименование вакансии, текст которой может быть очень длинным',
+  })
+
+  +layout({})
+    +article({
+      vacancy: true,
+    })
+  
+  include ../react/providers/pages/vacancy/RequestVacancieProvider/RequestVacancieProvider

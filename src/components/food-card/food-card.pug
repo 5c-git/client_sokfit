@@ -1,0 +1,12 @@
+mixin food-card(props)
+  article.food-card
+    if props.src
+      figure.food-card__banner
+        img(src=props.src alt=props.title)
+      div.food-card__main
+        span.food-card__title=props.title
+        span.food-card__price=props.price 
+        div.food-card__descriptions
+          span.food-card__description Белки - 20
+          span.food-card__description Жиры - 8
+          span.food-card__description Углеводы - 60

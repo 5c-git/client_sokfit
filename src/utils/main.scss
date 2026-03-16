@@ -1,0 +1,256 @@
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background-color: #4CA748;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  font-size: 0;
+  clip: rect(0 0 0 0);
+}
+
+.static {
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  min-width: 320px;
+  min-height: calc(var(--vh, 1vh) * 100);
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+  font-family: $main-font;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #000000;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+
+  @media(max-width: $phone) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+main {
+  // min-height: 50vh;
+  flex-grow: 1;
+
+  @media(max-width: 767px) {
+    // min-height: 50vh;
+  }
+
+  & > section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 130px;
+    flex-grow: 1;
+
+    @media(max-width: $tablet) {
+      padding-bottom: 70px;
+    }
+    @media(max-width: $phone) {
+      padding-bottom: 40px;
+    }
+  }
+}
+
+a {
+  text-underline-position: under;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 50px $White inset !important;
+  -webkit-text-fill-color: $Main;
+}
+
+.container {
+  position: relative;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding-right: 30px;
+  padding-left: 30px;
+  box-sizing: border-box;
+
+  @media(max-width: $phone) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.fslightbox-nav {
+  z-index: 5;
+}
+
+.fslightbox-container {
+  backdrop-filter: blur(10px);
+}
+
+.fslightbox-toolbar-button:first-of-type {
+  display: none;
+}
+
+.fslightbox-slide-number-container {
+  background-color: rgba(35, 35, 35, 0.65);
+}
+
+.viewerjs__zoom {
+  background-color: rgba($color: $Main, $alpha: 80%);
+  backdrop-filter: blur(20px);
+
+  .viewer-title {
+    @include Regular_16_Inter;
+  }
+
+  .viewer-toolbar > ul > .viewer-large {
+    width: 40px;
+    height: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .viewer-toolbar > ul > .viewer-large:before {
+    margin: 10px;
+  }
+}
+
+.swiper {
+
+  .trainer-card {
+    width: 285px;
+
+    @media(max-width: $phone) {
+      width: 276px;
+    }
+  }
+
+  .news-card {
+    width: 380px;
+
+    @media(max-width: $phone) {
+      width: 276px;
+    }
+  }
+}
+
+.text-crop-2 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+  @media(max-width: $phone) {
+    -webkit-line-clamp: 3;
+  }
+}
+
+.text-crop-3 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.slide-up {
+  animation: slide-up 0.5s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@keyframes bounce {
+
+  0% {
+    transform: translateX(1000px);
+  }
+
+  70% {
+    transform: translateX(-30px);
+  }
+
+  90% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-up {
+
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main_rz {
+  overflow: unset !important;
+}
+
+.fixed_fit {
+  top: 0 !important;
+}
+
+.body-sched td:first-child {
+  padding: 8px 0 0 4px !important;
+}
+
+.body-sched td:last-child {
+  padding: 8px 4px 0 0 !important;
+}
+
+footer:not(.footer) {
+  display: none;
+}

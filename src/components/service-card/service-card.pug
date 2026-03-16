@@ -1,0 +1,13 @@
+mixin service-card(props)
+  article.service-card
+    div.service-card__header
+      a.service-card__banner
+        if props.src
+          img(src=props.src alt=props.title)
+      button(type='button' data-type='service' data-id='1').button-request.button.service-card__registration Записаться
+
+    div.service-card__info
+      span.service-card__direction Тренажерный зал
+      span.service-card__duration от 30 минут
+
+    a.service-card__title=props.title

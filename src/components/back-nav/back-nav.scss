@@ -1,0 +1,49 @@
+
+.back-nav {
+  margin-top: 40px;
+  margin-bottom: 150px;
+
+  @media(max-width: $tablet) {
+    margin-bottom: 70px;
+  }
+  @media(max-width: $phone) {
+    margin-top: 24px;
+    margin-bottom: 48px;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  &__list {
+    display: inline-grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    grid-auto-flow: column;
+    grid-column-gap: 100px;
+
+    @media(max-width: $desktop) {
+      grid-column-gap: 30px;
+    }
+    @media(max-width: $phone) {
+      grid-auto-flow: row;
+      grid-row-gap: 16px;
+    }
+  }
+
+  &__item {
+    @include Bold_18_Europeext_Upper;
+  }
+
+  &__link {
+    color: inherit;
+    transition: color 0.3s;
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+        color: $Main_2;
+      }
+    }
+  }
+}

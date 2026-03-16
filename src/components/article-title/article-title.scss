@@ -1,0 +1,16 @@
+
+.article-title {
+  margin-top: 50px;
+  margin-bottom: 30px;
+
+  @media(max-width: $phone) {
+    margin-top: 32px;
+    margin-bottom: 24px;
+  }
+
+  &__main {
+    @include Bold_40_europeext_upper;
+    margin: 0;
+    word-break: break-word;
+  }
+}

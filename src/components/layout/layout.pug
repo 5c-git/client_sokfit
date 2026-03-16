@@ -1,0 +1,227 @@
+include ../trainer-card/trainer-card
+include ../news-card/news-card
+
+mixin layout(props)
+  if props.slider1
+    section.layout.layout--slider
+      div.container 
+        div.layout__wrapper
+
+          if props.title
+            h2.layout__title=props.title
+
+          div.layout__slider
+            div.swiper
+              ul.swiper-wrapper.layout__slider-list
+                li.swiper-slide.layout__slider-item
+                  +trainer-card({
+                    src: './assets/images/trainer-1.jpg',
+                    title: 'Константин Константинович',
+                    tabs: true,
+                  })
+                li.swiper-slide.layout__slider-item
+                  +trainer-card({
+                    src: './assets/images/trainer-2.jpg',
+                    title: 'Алексеев Антон',
+                  })
+                li.swiper-slide.layout__slider-item
+                  +trainer-card({
+                    title: 'Сергей Харионов',
+                    tabs: true,
+                  })
+                li.swiper-slide.layout__slider-item
+                  +trainer-card({
+                    src: './assets/images/trainer-4.jpg',
+                    title: 'Брюс Уиллис',
+                    tabs: true,
+                  })
+                li.swiper-slide.layout__slider-item
+                  +trainer-card({
+                    src: './assets/images/trainer-5.jpg',
+                    title: 'Софи Брюссо',
+                    tabs: true,
+                  })
+                li.swiper-slide.layout__slider-item
+                  +trainer-card({
+                    src: './assets/images/trainer-1.jpg',
+                    title: 'Константин Константинович',
+                    tabs: true,
+                  })
+                li.swiper-slide.layout__slider-item
+                  +trainer-card({
+                    src: './assets/images/trainer-2.jpg',
+                    title: 'Алексеев Антон',
+                  })
+                li.swiper-slide.layout__slider-item
+                  +trainer-card({
+                    src: './assets/images/trainer-3.jpg',
+                    title: 'Сергей Харионов',
+                    tabs: true,
+                  })
+                li.swiper-slide.layout__slider-item
+                  +trainer-card({
+                    src: './assets/images/trainer-4.jpg',
+                    title: 'Брюс Уиллис',
+                    tabs: true,
+                  })
+                li.swiper-slide.layout__slider-item
+                  +trainer-card({
+                    src: './assets/images/trainer-5.jpg',
+                    title: 'Софи Брюссо',
+                    tabs: true,
+                  })
+              div.layout__scrollbar
+
+          if props.all
+            a(href="#").layout__all=props.all
+
+  else if props.slider2
+    section.layout.layout--slider
+      div.container 
+        div.layout__wrapper
+
+          if props.title
+            h2.layout__title=props.title
+
+          div.layout__slider
+            div.swiper
+              ul.swiper-wrapper.layout__slider-list
+                li.swiper-slide.layout__slider-item
+                  +news-card({
+                    src: './assets/images/image-7.jpg',
+                    title: 'Соревнования по плаванию',
+                  })
+                li.swiper-slide.layout__slider-item
+                  +news-card({
+                    src: './assets/images/image-1.jpg',
+                    title: 'Аэро-йога для взрослых и детей',
+                  })
+                li.swiper-slide.layout__slider-item
+                  +news-card({
+                    src: './assets/images/image-2.jpg',
+                    title: 'Заголовок новости, который может быть очень и очень длинным',
+                  })
+                li.swiper-slide.layout__slider-item
+                  +news-card({
+                    src: './assets/images/image-3.jpg',
+                    title: 'Аэро-йога для взрослых и детей',
+                  })
+                li.swiper-slide.layout__slider-item
+                  +news-card({
+                    src: './assets/images/image-4.jpg',
+                    title: 'Заголовок новости, который может быть очень и очень длинным',
+                  })
+                li.swiper-slide.layout__slider-item
+                  +news-card({
+                    src: './assets/images/image-5.jpg',
+                    title: 'Соревнования по плаванию',
+                  })
+                li.swiper-slide.layout__slider-item
+                  +news-card({
+                    src: './assets/images/image-6.jpg',
+                    title: 'Аэро-йога для взрослых и детей',
+                  })
+                li.swiper-slide.layout__slider-item
+                  +news-card({
+                    src: './assets/images/image-7.jpg',
+                    title: 'Заголовок новости, который может быть очень и очень длинным',
+                  })
+                li.swiper-slide.layout__slider-item
+                  +news-card({
+                    src: './assets/images/image-8.jpg',
+                    title: 'Аэро-йога для взрослых и детей',
+                  })
+                li.swiper-slide.layout__slider-item
+                  +news-card({
+                    src: './assets/images/image-11.jpg',
+                    title: 'Заголовок новости, который может быть очень и очень длинным',
+                  })
+              div.layout__scrollbar
+
+          if props.all
+            a(href="#").layout__all=props.all
+
+  else if props.grid2 
+    section.layout.layout--grid2 
+      div.container 
+        div.layout__wrapper
+
+          if props.title
+            h2.layout__title=props.title
+
+          div.layout__list
+            block
+
+          if props.pagination
+            include ../pagination/pagination
+
+          if props.all
+            a(href="#").layout__all=props.all
+
+  else if props.grid3
+    section.layout.layout--grid3
+      div.container 
+        div.layout__wrapper
+
+          if props.title
+            h2.layout__title=props.title
+
+          div.layout__list
+            block
+
+          if props.pagination
+            include ../pagination/pagination
+
+          if props.all
+            a(href="#").layout__all=props.all
+
+  else if props.grid4
+    section.layout.layout--grid4
+      div.container 
+        div.layout__wrapper
+
+          if props.title
+            h2.layout__title=props.title
+
+          div.layout__list
+            block
+
+          if props.pagination
+            include ../pagination/pagination
+
+          if props.all
+            a(href="#").layout__all=props.all
+
+  else if props.column
+    section.layout.layout--column
+      div.container 
+        div.layout__wrapper
+
+          if props.title
+            h2.layout__title=props.title
+
+          div.layout__list
+            block
+
+          if props.pagination
+            include ../pagination/pagination
+
+          if props.all
+            a(href="#").layout__all=props.all
+
+  else
+    section.layout
+      div.container 
+        div.layout__wrapper
+
+          if props.title
+            h2.layout__title=props.title
+
+          div.layout__list
+            block
+
+          if props.pagination
+            include ../pagination/pagination
+
+          if props.all
+            a(href="#").layout__all=props.all

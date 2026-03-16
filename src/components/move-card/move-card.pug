@@ -1,0 +1,12 @@
+mixin move-card(props)
+  article.move-card
+    div.move-card__box
+      div.move-card__main
+        p.move-card__title=props.title
+        p.move-card__time 12 месяцев
+          em 30 дней заморозки
+        div.move-card__description
+          ul
+            each item in props.list
+              li=item
+    button(type='button' data-type='card' data-id='1').button-request.button.move-card__registration Оформить

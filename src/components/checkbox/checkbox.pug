@@ -1,0 +1,15 @@
+mixin checkbox(props)
+  div.checkbox
+    label.checkbox__label
+      if props.text
+        span!=props.text
+      input(
+        class=props.mixin
+        type=props.type
+        id=props.id
+        name=props.name
+        data-name=props.dataName
+        checked=props.checked
+        required=props.required
+      ).visually-hidden
+      span.checkbox__box

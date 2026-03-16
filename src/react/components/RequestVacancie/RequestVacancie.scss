@@ -1,0 +1,256 @@
+
+.RequestVacancie {
+  @include Regular_16_Inter;
+  color: $White;
+
+  .InputPhone__field,
+  .Input__field,
+  .Textarea__field {
+    color: $White;
+    background-color: transparent;
+  }
+
+  &__title {
+    @include Bold_40_europeext_upper;
+    margin: 0;
+    margin-bottom: 60px;
+
+    @media(max-width: $phone) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+
+    @media(max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media(max-width: $phone) {
+      grid-template-columns: 1fr;
+      grid-row-gap: 12px;
+    }
+  }
+
+  &__field {
+
+    &--file {
+      @media(max-width: $tablet) {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+      @media(max-width: $phone) {
+        grid-column-start: unset;
+        grid-row-start: unset;
+        grid-row-end: unset;
+      }
+    }
+
+    &--wide {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__legal {
+    @include Regular_16_Inter;
+    margin: 0;
+    color: $Grey_1;
+
+    @media(max-width: $phone) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    a {
+      color: inherit;
+      transition: color 0.3s;
+
+      &:hover {
+        @media(min-width: $desktop-only) {
+          color: $Main_2;
+        }
+      }
+    }
+  }
+
+  &__submit {
+    width: 100%;
+  }
+
+  &__dropzone-button {
+    @include Med_14_Inter_Upper;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: $White;
+    background-color: transparent;
+    transition: color 0.3s;
+    column-gap: 8px;
+    cursor: pointer;
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+        color: $Main_2;
+      }
+    }
+
+    i {
+      position: relative;
+      display: flex;
+      width: 28px;
+      height: 28px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      font-size: 30px;
+      line-height: 1;
+      background-color: $Main_2;
+
+      &:before {
+        position: absolute;
+        width: 14px;
+        height: 2px;
+        border-radius: 3px;
+        background-color: $White;
+        transform: rotate(90deg);
+        content: '';
+      }
+
+      &:after {
+        position: absolute;
+        width: 14px;
+        height: 2px;
+        border-radius: 3px;
+        background-color: $White;
+        content: '';
+      }
+    }
+  }
+
+  &__file-warning {
+    @include Regular_16_Inter;
+    margin: 0;
+    margin-top: 10px;
+    color: $Grey_1;
+
+    @media(max-width: $phone) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  &__files-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__files-item {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  &__files-info {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    column-gap: 10px;
+
+    .RequestVacancie__errors-text {
+      white-space: nowrap;
+    }
+  }
+
+  &__files-name {
+    margin: 0;
+    text-align: left;
+    word-break: break-all;
+  }
+
+  &__files-size {
+    display: none;
+    margin: 0;
+    text-align: right;
+  }
+
+  &__files-delete {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+    border: 0;
+    color: $White;
+    background-color: transparent;
+    transition: color 0.3s;
+    flex-shrink: 0;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+        color: $Main_2;
+      }
+    }
+
+    span {
+      position: relative;
+      display: inline-block;
+      width: 15px;
+      height: 1px;
+      background: transparent;
+      vertical-align: bottom;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: currentcolor;
+        content: '';
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: currentcolor;
+        content: '';
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__errors {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__errors-text {
+    margin: 0;
+    text-align: left;
+    color: $Main_2;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 50px $Main inset !important;
+    -webkit-text-fill-color: $White;
+  }
+}

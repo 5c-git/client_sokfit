@@ -1,0 +1,26 @@
+extends ../templates/default
+
+block main
+  include ../components/breadcrumbs/breadcrumbs
+
+  include ../components/back/back
+
+  +article-title({
+    title: 'Заголовок новости, Текст которой может быть очень длинным',
+  })
+
+  include ../components/article-action/article-action
+
+  include ../components/article-banner/article-banner
+
+  +layout({})
+    +article({
+      article: true,
+    })
+
+  include ../components/gallery/gallery
+
+  +layout({
+    slider2: true,
+    title: 'Может заинтересовать',
+  })

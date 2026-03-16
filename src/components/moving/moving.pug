@@ -1,0 +1,25 @@
+mixin moving(props)
+  if props.ver1
+    section.moving
+      div.moving__block
+        p Лучше время сейчас,
+      div.moving__block
+        p лучшее место здесь
+
+  if props.ver2
+    section.moving.moving--wide
+      div.moving__block
+        p Красота — результат тренировок
+        figure
+          img(src="./assets/images/moving-1.jpg", alt="")
+        p Не останавливайся!
+      div.moving__block
+        p Начни сейчас
+        figure
+          img(src="./assets/images/fun-1.jpg", alt="")
+        p Забота о своей физической форме
+      div.moving__block
+        p Никаких больше отговорок
+        figure
+          img(src="./assets/images/moving-3.jpg", alt="")
+        p Гармония и здоровье

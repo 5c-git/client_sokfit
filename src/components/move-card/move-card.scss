@@ -1,0 +1,186 @@
+
+.move-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+
+  @media(max-width: $phone) {
+    border-radius: unset;
+  }
+
+  &:nth-child(1) {
+
+    .move-card__box {
+      color: $White;
+      background: $Linear_black;
+
+      &:before {
+        background-image: url('../assets/images/club-card-background--white.svg');
+      }
+    }
+  }
+
+  &:nth-child(2) {
+
+    em {
+      color: $Grey_2;
+    }
+
+    .move-card__box {
+      color: $White;
+      background: $Linear_grey;
+
+      &:before {
+        background-image: url('../assets/images/club-card-background--white.svg');
+      }
+    }
+  }
+
+  &:nth-child(3) {
+
+    .move-card__box {
+      color: $Black;
+      background: $Light_grey_linear;
+    }
+  }
+
+  &:nth-child(4) {
+
+    .move-card__box {
+      border: 1px solid $Grey_3;
+      color: $Black;
+      background: $White;
+    }
+  }
+
+  &__box {
+    position: relative;
+    height: 100%;
+    min-height: 350px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 92px;
+    padding-left: 30px;
+    border-radius: 15px;
+    color: $Black;
+    transition: transform 0.2s;
+    overflow: hidden;
+
+    @media(max-width: $phone) {
+      height: unset;
+      min-height: unset;
+      padding-top: 12px;
+      padding-right: 8px;
+      padding-bottom: 20px;
+      padding-left: 8px;
+      border-radius: 4px;
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      right: 30px;
+      bottom: 0;
+      width: 160px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right;
+      background-image: url('../assets/images/club-card-background--black.svg');
+      content: '';
+
+      @media(max-width: $phone) {
+        right: 0;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    user-select: none;
+
+    @media(max-width: $phone) {
+      row-gap: 8px;
+    }
+  }
+
+  &__title {
+    @include Bold_30_europeext_upper;
+    margin: 0;
+
+    @media(max-width: $phone) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__time {
+    @include Bold_20_Europeext_Upper;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    column-gap: 20px;
+
+    @media(max-width: $phone) {
+      font-size: 13px;
+      line-height: 16px;
+      row-gap: 5px;
+    }
+
+    em {
+      font-style: normal;
+      color: $Grey_3;
+    }
+  }
+
+  &__description {
+    @include Regular_16_Inter;
+
+    @media(max-width: $phone) {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      row-gap: 5px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 18px;
+
+      @media(max-width: $phone) {
+        padding-left: 14px;
+      }
+
+      &:before {
+        position: absolute;
+        left: 0;
+        font-size: 150%;
+        font-weight: 700;
+        content: '•';
+      }
+    }
+  }
+
+  &__registration {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    left: 30px;
+
+    @media(max-width: $phone) {
+      position: unset;
+      width: 100%;
+      margin-top: 8px;
+    }
+  }
+}

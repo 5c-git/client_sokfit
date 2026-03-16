@@ -1,0 +1,34 @@
+.request-wrapper {
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: 5fr 6fr;
+  grid-gap: 100px;
+
+  @media(max-width: $tablet) {
+    grid-gap: 30px;
+  }
+
+  @media(max-width: $phone) {
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+  }
+
+  &__banner {
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+  }
+
+  &__main {
+    width: 100%;
+    max-width: 620px;
+  }
+}

@@ -1,0 +1,23 @@
+header.header
+  div.header__overlay
+
+  div.header__padding
+
+  div.header__fixed
+    div.container
+      div.header__wrapper
+        button(type='button').header__burger
+          span
+        a(href="#").header__logo
+          img(src="./assets/images/icon-logo.svg", alt="Логотип.").header__logo-main
+          img(src="./assets/images/icon-logo__text.svg", alt="Логотип.").header__logo-text
+        div.header__user
+          a(href="#" data-type='card' data-id='1').button-request.header__link.header__link--card 
+            i
+            span Купить карту
+          a(href="#").header__link.header__link--profile
+            svg(width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg")
+              use(href='#icon-profile')
+
+  div.header__dropdown
+    include ../header-dropdown/header-dropdown

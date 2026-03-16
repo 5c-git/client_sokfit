@@ -1,0 +1,123 @@
+
+.equipment {
+
+  .swiper-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__gallery {
+    position: relative;
+    padding-top: 56.25%;
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+
+        .equipment__buttons {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__image {
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: zoom-in;
+    }
+  }
+
+  &__scrollbar {
+    display: block;
+    height: 4px;
+    margin-top: 40px;
+    border-radius: 4px;
+    background-color: rgba($color: $Black, $alpha: 20%);
+
+    @media(max-width: $tablet) {
+      margin-top: 16px;
+    }
+  }
+
+  &__scrollbar-drag {
+    height: 100%;
+    border-radius: 4px;
+    background-color: $Black;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+        background-color: $Main_2;
+      }
+    }
+  }
+
+  &__buttons {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    left: 15px;
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition:
+      opacity 0.3s,
+      visibility 0.3s;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+
+  &__button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: $Black;
+    transition: color 0.3s;
+    background: 0;
+    cursor: pointer;
+
+    &:not(:disabled):hover {
+      @media(min-width: $desktop-only) {
+        color: $Main_2;
+      }
+    }
+
+    &:disabled {
+      color: $Grey_3;
+      cursor: not-allowed;
+    }
+
+    svg {
+      display: block;
+      width: 60px;
+      height: 60px;
+      fill: currentcolor;
+      stroke: currentcolor;
+
+      @media(max-width: $phone) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &--prev {
+      transform: rotate(-90deg);
+    }
+
+    &--next {
+      transform: rotate(90deg);
+    }
+  }
+}

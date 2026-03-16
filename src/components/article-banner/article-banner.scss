@@ -1,0 +1,22 @@
+
+.article-banner {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  @media(max-width: $phone) {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__banner {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

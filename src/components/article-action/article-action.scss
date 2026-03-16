@@ -1,0 +1,47 @@
+
+.article-action {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  @media(max-width: $phone) {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+
+    @media(max-width: $phone) {
+      gap: 16px;
+    }
+  }
+
+  &__time {
+    @include Bold_16_Europeext_Upper;
+    margin: 0;
+    color: $Grey_1;
+  }
+
+  &__share {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+
+    @media(max-width: $phone) {
+      gap: 8px;
+    }
+  }
+
+  &__name {
+    @include Bold_16_Europeext_Upper;
+    margin: 0;
+    color: $Grey_1;
+  }
+}

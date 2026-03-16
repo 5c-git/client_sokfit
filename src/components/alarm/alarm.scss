@@ -1,0 +1,37 @@
+.alarm {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  color: $White;
+  background-color: $Main;
+
+  @media(max-width: $tablet) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  @media(max-width: $phone) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  em {
+    font-style: inherit;
+    color: $Main_2;
+  }
+
+  &__text {
+    @include Bold_italic_60_europeext_upper;
+    margin: 0;
+    text-align: center;
+
+    @media(max-width: $tablet) {
+      font-size: 48px;
+      line-height: 56px;
+    }
+
+    @media(max-width: $phone) {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+
+.direction-tabs {
+  margin-top: 30px;
+  margin-bottom: 60px;
+
+  @media(max-width: $phone) {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  & + .layout {
+    margin-top: 60px;
+
+    @media(max-width: $phone) {
+      margin-top: 24px;
+    }
+  }
+
+  &__wrapper {}
+
+  &__list {
+    @include Med_14_Inter_Upper;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 10px;
+
+    @media(max-width: $phone) {
+      gap: 8px;
+    }
+  }
+
+  &__item {
+
+    a {
+      display: block;
+      padding-top: 9px;
+      padding-right: 14px;
+      padding-bottom: 9px;
+      padding-left: 14px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: $Grey_1;
+      background-color: transparent;
+      transition:
+        color 0.3s,
+        border-color 0.3s,
+        background-color 0.3s;
+      outline: 1px solid currentcolor;
+      outline-offset: -1px;
+      overflow: hidden;
+
+      @media(max-width: $phone) {
+        padding-top: 4px;
+        padding-right: 7px;
+        padding-bottom: 4px;
+        padding-left: 7px;
+      }
+
+      &[href] {
+
+        &:hover {
+          @media(min-width: $desktop-only) {
+            color: $Main_2;
+          }
+        }
+      }
+    }
+
+    &--active {
+
+      a {
+        color: $White;
+        background-color: $Black;
+        outline: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+extends ../templates/default
+
+include ../components/layout-header/layout-header
+include ../components/empty/empty
+
+block main
+  include ../components/breadcrumbs/breadcrumbs
+  +title({
+    title: 'Вакансии'
+  })
+  
+  +layout-header({
+    jobs: true,
+    title: 'Работа у нас',
+  })
+
+  include ../components/job-benefits/job-benefits
+
+  +h2({
+    title: 'Вакансии',
+  })
+
+  +empty({
+    text: 'На данный момент открытых вакансий нет',
+  })
+
+  include ../components/bottom-nav/bottom-nav

@@ -1,0 +1,24 @@
+
+.h2 {
+  margin-bottom: 40px;
+
+  @media(max-width: $phone) {
+    margin-bottom: 24px;
+  }
+
+  &:not(:first-child) {
+    margin-top: 150px;
+
+    @media(max-width: $tablet) {
+      margin-top: 70px;
+    }
+    @media(max-width: $phone) {
+      margin-top: 48px;
+    }
+  }
+
+  &__main {
+    @include Bold_40_europeext_upper;
+    margin: 0;
+  }
+}

@@ -1,0 +1,37 @@
+.accordion {
+
+  &__inner {
+    max-height: 0;
+    transition: max-height 0.3s ease-in;
+    overflow: hidden;
+  }
+
+  &__answer {
+    transition:
+      opacity 0.3s,
+      visibility 0.3s;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &--active {
+
+    .accordion__answer {
+      transition:
+        opacity 0.3s 0.3s,
+        visibility 0.3s 0.3s;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .accordion__header:after {
+      color: $Main_2;
+      transform: rotate(45deg);
+    }
+
+    .accordion__header:before {
+      color: $Main_2;
+      transform: rotate(-45deg);
+    }
+  }
+}

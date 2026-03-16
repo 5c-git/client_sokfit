@@ -1,0 +1,102 @@
+
+.bottom-nav {
+  margin-bottom: -1px !important;
+  padding: 0 !important;
+  border-top: 1px solid $Grey_1;
+  border-bottom: 1px solid $Grey_1;
+
+  &__list {
+    display: grid;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+
+    @media(max-width: $phone) {
+      grid-auto-flow: row;
+      grid-gap: unset;
+    }
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+
+        .bottom-nav__item:before {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:first-of-type) {
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 1px;
+        height: 180px;
+        background-color: $Grey_1;
+        transition: opacity 0.3s;
+        transform: translateY(-50%);
+        content: '';
+
+        @media(max-width: $tablet) {
+          height: 140px;
+        }
+        @media(max-width: $phone) {
+          top: 0;
+          right: 0;
+          bottom: unset;
+          left: 0;
+          width: unset;
+          height: 1px;
+          transform: unset;
+        }
+      }
+    }
+  }
+
+  &__link {
+    @include Bold_30_europeext_upper;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding-top: 180px;
+    padding-right: 20px;
+    padding-bottom: 180px;
+    padding-left: 20px;
+    text-decoration: none;
+    color: $Black;
+    transition:
+      color 0.3s,
+      background-color 0.3s;
+
+    @media(max-width: $tablet) {
+      padding-top: 80px;
+      padding-right: 20px;
+      padding-bottom: 80px;
+      padding-left: 20px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+    @media(max-width: $phone) {
+      padding-top: 75px;
+      padding-right: 20px;
+      padding-bottom: 75px;
+      padding-left: 20px;
+    }
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+        color: $White;
+        background-color: $Main_2;
+      }
+    }
+  }
+}

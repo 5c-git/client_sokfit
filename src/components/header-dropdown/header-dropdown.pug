@@ -1,0 +1,32 @@
+section.header-dropdown
+  div.header-dropdown__wrapper
+    a(href="#" data-type='card' data-id='1').button-request.header-dropdown__card 
+      i
+      span Купить карту
+    nav.header-dropdown__nav
+      ul.header-dropdown__nav-list 
+        li.header-dropdown__nav-item 
+          a(href="#").header-dropdown__nav-link Расписание 
+        li.header-dropdown__nav-item 
+          a(href="#").header-dropdown__nav-link Услуги
+        li.header-dropdown__nav-item 
+          a(href="#").header-dropdown__nav-link Тренерский состав
+        li.header-dropdown__nav-item 
+          a(href="#").header-dropdown__nav-link Новости
+        li.header-dropdown__nav-item 
+          a(href="#").header-dropdown__nav-link Клубные карты
+        li.header-dropdown__nav-item 
+          a(href="#").header-dropdown__nav-link Залы
+        li.header-dropdown__nav-item 
+          a(href="#").header-dropdown__nav-link Кафе
+        li.header-dropdown__nav-item 
+          a(href="#").header-dropdown__nav-link Контакты
+        li.header-dropdown__nav-item 
+          a(href="#").header-dropdown__nav-link Вакансии
+    div.header-dropdown__socials
+      +socials({
+        ver2: true,
+      })
+
+  button(type='button').header-dropdown__burger
+    span

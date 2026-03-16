@@ -1,0 +1,123 @@
+extends ../templates/default
+
+include ../components/service-card/service-card
+
+block main
+  include ../components/breadcrumbs/breadcrumbs
+  +title({
+    title: 'Услуги'
+  })
+
+  +tabs({
+    tabs: [
+      {
+        link: 'Персональные тренировки'
+      },
+      {
+        link: 'Групповые программы'
+      },
+      {
+        link: 'Детский клуб'
+      },
+      {
+        link: 'Кафе'
+      },
+      {
+        active: true,
+        link: 'СПА'
+      },
+    ]
+  })
+
+  +direction-tabs({
+    tabs: [
+      {
+        link: 'Все категории'
+      },
+      {
+        link: 'Конструкт-уходы'
+      },
+      {
+        active: true,
+        link: 'Anti-age уходы'
+      },
+      {
+        link: 'массажи'
+      },
+      {
+        link: 'уходы для лица'
+      },
+      {
+        link: 'Другая категория'
+      },
+      {
+        link: 'Другая категория'
+      },
+      {
+        link: 'Другая категория'
+      },
+      {
+        link: 'Другая категория'
+      },
+      {
+        link: 'Другая категория'
+      },
+    ]
+  })
+
+  +layout({
+    grid3: true,
+    pagination: true,
+  })
+    +service-card({
+      src: './assets/images/image-7.jpg',
+      title: 'Наименование услуги, которое может быть очень и очень длинным.',
+    })
+    +service-card({
+      src: './assets/images/image-8.jpg',
+      title: 'Наименование услуги.',
+    })
+    +service-card({
+      src: './assets/images/image-12.jpg',
+      title: 'Наименование услуги, которое может быть очень и очень длинным.',
+    })
+    +service-card({
+      src: './assets/images/image-17.jpg',
+      title: 'Наименование услуги.',
+    })
+    +service-card({
+      src: './assets/images/image-18.jpg',
+      title: 'Наименование услуги.',
+    })
+    +service-card({
+      src: './assets/images/image-19.jpg',
+      title: 'Наименование услуги.',
+    })
+    +service-card({
+      src: './assets/images/image-20.jpg',
+      title: 'Наименование услуги.',
+    })
+    +service-card({
+      src: './assets/images/image-21.jpg',
+      title: 'Наименование услуги, которое может быть очень и очень длинным.',
+    })
+    +service-card({
+      src: './assets/images/image-17.jpg',
+      title: 'Наименование услуги, которое может быть длинным.',
+    })
+    +service-card({
+      src: './assets/images/image-15.jpg',
+      title: 'Наименование услуги, которое может быть длинным.',
+    })
+    +service-card({
+      src: './assets/images/image-11.jpg',
+      title: 'Наименование услуги.',
+    })
+    +service-card({
+      src: './assets/images/image-14.jpg',
+      title: 'Наименование услуги, которое может быть длинным.',
+    })
+
+  include ../components/help/help
+
+  include ../components/bottom-nav/bottom-nav

@@ -1,0 +1,23 @@
+mixin layout-header(props)
+  section.layout-header
+    div.container
+      div.layout-header__wrapper
+        if props.menu
+          h2.layout-header__title=props.title
+          div.layout-header__main
+            p Digital-агентство 5 УГЛОВ оказывает услуги в области айдентики, веб-разработки, интернет-маркетинга и медиа продакшена, используя передовые технологии и опыт сплоченной команды профессионалов. Дескриптор или УТП, которое описывает деятельность компании в самом выгодном свете.
+            div.layout-header__delivery
+              a(href="") 
+                img(src='./assets/images/delivery_banner.jpg')
+              a(href="") 
+                img(src='./assets/images/yandex-banner.jpg')
+          figure.layout-header__banner 
+            img(src='./assets/images/image-2.jpg')
+
+        else if props.jobs
+          h2.layout-header__title=props.title
+          div.layout-header__main
+            p Digital-агентство 5 УГЛОВ оказывает услуги в области айдентики, веб-разработки, интернет-маркетинга и медиа продакшена, используя передовые технологии и опыт сплоченной команды профессионалов. Дескриптор или УТП, которое описывает деятельность компании в самом выгодном свете.
+            p Digital-агентство 5 УГЛОВ оказывает услуги в области айдентики, веб-разработки, интернет-маркетинга и медиа продакшена, используя передовые технологии и опыт сплоченной команды профессионалов.
+          figure.layout-header__banner 
+            img(src='./assets/images/image-15.jpg')

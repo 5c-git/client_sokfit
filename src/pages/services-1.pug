@@ -1,0 +1,123 @@
+extends ../templates/default
+
+include ../components/workout-card/workout-card
+
+block main
+  include ../components/breadcrumbs/breadcrumbs
+  +title({
+    title: 'Услуги'
+  })
+
+  +tabs({
+    tabs: [
+      {
+        active: true,
+        link: 'Персональные тренировки'
+      },
+      {
+        link: 'Групповые программы'
+      },
+      {
+        link: 'Детский клуб'
+      },
+      {
+        link: 'Кафе'
+      },
+      {
+        link: 'СПА'
+      },
+    ]
+  })
+
+  +direction-tabs({
+    tabs: [
+      {
+        active: true,
+        link: 'Все категории'
+      },
+      {
+        link: 'Кросс-фит'
+      },
+      {
+        link: 'Тренажерный зал'
+      },
+      {
+        link: 'Бассейн'
+      },
+      {
+        link: 'Боевые искусства'
+      },
+      {
+        link: 'Другая категория'
+      },
+      {
+        link: 'Другая категория'
+      },
+      {
+        link: 'Другая категория'
+      },
+      {
+        link: 'Другая категория'
+      },
+      {
+        link: 'Другая категория'
+      },
+    ]
+  })
+
+  +layout({
+    grid3: true,
+    pagination: true,
+  })
+    +workout-card({
+      src: './assets/images/fun-1.jpg',
+      title: 'Наименование программы, которое может быть очень и очень длинным.',
+    })
+    +workout-card({
+      src: './assets/images/fun-2.jpg',
+      title: 'Наименование программы.',
+    })
+    +workout-card({
+      src: './assets/images/fun-3.jpg',
+      title: 'Наименование программы.',
+    })
+    +workout-card({
+      src: './assets/images/fun-4.jpg',
+      title: 'Наименование программы, которое может быть очень и очень длинным.',
+    })
+    +workout-card({
+      src: './assets/images/image-6.jpg',
+      title: 'Наименование программы, которое может быть длинным.',
+    })
+    +workout-card({
+      src: './assets/images/image-14.jpg',
+      title: 'Наименование программы, которое может быть очень и очень длинным.',
+    })
+    +workout-card({
+      src: './assets/images/image-15.jpg',
+      title: 'Наименование программы, которое может быть длинным.',
+    })
+    +workout-card({
+      src: './assets/images/image-16.jpg',
+      title: 'Наименование программы.',
+    })
+    +workout-card({
+      src: './assets/images/image-2.jpg',
+      title: 'Наименование программы, которое может быть длинным.',
+    })
+    +workout-card({
+      src: './assets/images/image-9.jpg',
+      title: 'Наименование программы.',
+    })
+    +workout-card({
+      src: './assets/images/image-10.jpg',
+      title: 'Наименование программы.',
+    })
+    +workout-card({
+      src: './assets/images/image-11.jpg',
+      title: 'Наименование программы.',
+    })
+
+  include ../components/help/help
+
+  include ../components/bottom-nav/bottom-nav

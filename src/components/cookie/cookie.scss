@@ -1,0 +1,158 @@
+
+.cookie {
+  position: fixed;
+  top: unset;
+  right: unset;
+  bottom: 50px;
+  left: 0;
+  z-index: 15;
+  width: 100%;
+  height: unset;
+  color: $Black;
+  transform: unset;
+  overflow: initial;
+
+  @media(max-width: $phone) {
+    bottom: 15px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: underline;
+    color: $Main_2;
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__overlay {
+    display: none;
+  }
+
+  &__wrapper {
+    display: flex;
+    max-width: 680px;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    border-radius: 3px;
+    background-color: $White;
+    box-shadow: 0 25px 40px rgba($color: #111111, $alpha: 20%);
+    gap: 10px;
+
+    @media(max-width: $phone) {
+      padding-top: 16px;
+      padding-right: 12px;
+      padding-bottom: 16px;
+      padding-left: 12px;
+      gap: 5px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    @media(max-width: $phone) {
+      gap: 5px;
+    }
+  }
+
+  &__title {
+    @include Bold_20_Europeext_Upper;
+    margin: 0;
+
+    @media(max-width: $phone) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__main {
+    @include Regular_20_Inter;
+  }
+
+  &__close {
+    position: relative;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: $Black;
+    background-color: transparent;
+    transition: color 0.3s;
+    outline: none;
+    cursor: pointer;
+
+    @media(max-width: $phone) {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+        color: $Main_2;
+      }
+    }
+
+    span {
+      position: relative;
+      display: inline-block;
+      width: 30px;
+      height: 2px;
+      background: transparent;
+      vertical-align: bottom;
+
+      @media(max-width: $phone) {
+        width: 20px;
+      }
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: currentcolor;
+        content: '';
+        transform: rotate(45deg);
+
+        @media(max-width: $phone) {
+          height: 1px;
+        }
+      }
+
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: currentcolor;
+        content: '';
+        transform: rotate(-45deg);
+
+        @media(max-width: $phone) {
+          height: 1px;
+        }
+      }
+    }
+  }
+}

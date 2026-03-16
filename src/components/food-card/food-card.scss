@@ -1,0 +1,84 @@
+
+.food-card {
+
+  &__banner {
+    display: block;
+    width: 100%;
+    height: 210px;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+    background-color: $Grey_4;
+    background-image: url('../assets/images/no-img.svg');
+    overflow: hidden;
+
+    @media(max-width: $phone) {
+      height: 190px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__main {
+    display: grid;
+    margin-top: 15px;
+    grid-template-columns: 1fr min-content;
+    grid-column-gap: 15px;
+    grid-row-gap: 5px;
+    grid-template-areas:
+      'title price'
+      'descriptions descriptions';
+
+    @media(max-width: $phone) {
+      margin-top: 12px;
+      grid-gap: 8px;
+    }
+  }
+
+  &__title {
+    @include Bold_18_Inter_upper;
+    display: block;
+    margin: 0;
+    text-decoration: none;
+    color: $Black;
+    grid-area: title;
+  }
+
+  &__price {
+    @include Bold_18_Inter_upper;
+    white-space: nowrap;
+    grid-area: price;
+  }
+
+  &__descriptions {
+    @include Med_12_Inter_Upper;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-area: descriptions;
+    column-gap: 5px;
+    row-gap: 5px;
+  }
+
+  &__description {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 5px;
+
+    &:not(:first-of-type) {
+
+      &:before {
+        content: '|';
+      }
+    }
+  }
+}

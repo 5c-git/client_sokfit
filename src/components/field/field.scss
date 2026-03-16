@@ -1,0 +1,67 @@
+
+.field {
+  width: 100%;
+
+  &__input {
+    @include Regular_25_Inter;
+    width: 100%;
+    margin: 0;
+    padding-top: 19px;
+    padding-right: 19px;
+    padding-bottom: 19px;
+    padding-left: 19px;
+    border: 1px solid $Grey_1;
+    border-radius: 3px;
+    color: $Black;
+    background-color: $White;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media(max-width: $phone) {
+      padding-top: 11px;
+      padding-right: 15px;
+      padding-bottom: 11px;
+      padding-left: 15px;
+    }
+
+    &::placeholder {
+      @include Regular_25_Inter;
+      color: $Grey_1;
+    }
+  }
+
+  &__label {
+    display: none;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $Black;
+
+    @media(max-width: $phone) {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    &--required {
+      position: relative;
+
+      &:after {
+        color: $Error;
+        content: '*';
+      }
+    }
+  }
+
+  &--error {
+
+    .field__label {
+      color: $Error;
+    }
+
+    .field__field {
+      border-color: $Error;
+    }
+  }
+}
