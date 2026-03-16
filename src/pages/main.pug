@@ -3,10 +3,13 @@ extends ../templates/default
 include ../components/moving/moving
 
 block main
-  include ../components/start/start
+
+  include ../components/banner/banner
 
   +layout({})
     include ../components/request-wrapper/request-wrapper
+
+  //- include ../components/start/start
 
   include ../components/main-about/main-about
 

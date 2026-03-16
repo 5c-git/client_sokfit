@@ -1,0 +1,27 @@
+section.banner
+  video(
+    preload='auto'
+    loop
+    playsinline
+    muted
+    autoplay
+    poster='./assets/images/fun-3.jpg'
+  ).banner__media
+    source(
+      media='(max-width: 767px)'
+      src='./assets/documents/banner-mobile-2.mp4'
+      type="video/mp4"
+    )
+    source(
+      src='./assets/documents/banner-desktop-1.mp4'
+      type="video/mp4"
+    )
+
+
+//- section.banner
+//-   picture.banner__media
+//-     source(
+//-       media="(max-width: 767px)"
+//-       srcset="./assets/images/fun-5.jpg"
+//-     )
+//-     img(src="./assets/images/fun-2.jpg" alt="")

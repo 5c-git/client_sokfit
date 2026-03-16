@@ -57,6 +57,7 @@ var map = {
 	"./article/article.js": 1217,
 	"./back-nav/back-nav.js": 4745,
 	"./back/back.js": 2137,
+	"./banner/banner.js": 1179,
 	"./bottom-nav/bottom-nav.js": 7977,
 	"./breadcrumbs/breadcrumbs.js": 4073,
 	"./button/button.js": 2271,
@@ -128,6 +129,7 @@ var map = {
 	"components/article/article.js": 1217,
 	"components/back-nav/back-nav.js": 4745,
 	"components/back/back.js": 2137,
+	"components/banner/banner.js": 1179,
 	"components/bottom-nav/bottom-nav.js": 7977,
 	"components/breadcrumbs/breadcrumbs.js": 4073,
 	"components/button/button.js": 2271,
@@ -563,6 +565,16 @@ if (RequestModalProvider) {
 /***/ },
 
 /***/ 1015
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
+
+/***/ },
+
+/***/ 1179
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

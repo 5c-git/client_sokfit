@@ -120,7 +120,7 @@
 
     &:hover {
       @media(min-width: $desktop-only) {
-        color: $Main_2;
+        color: $Main_2 !important;
       }
     }
 

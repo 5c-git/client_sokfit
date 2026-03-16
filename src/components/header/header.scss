@@ -38,7 +38,7 @@
     left: 0;
     z-index: 5;
     color: $Black;
-    background-color: transparent;
+    background-color: $White;
     transition:
       transform 0.3s,
       background-color 0.3s,
@@ -296,7 +296,7 @@
 
     .header-dropdown__burger {
       color: $Black;
-      transition: color 0.3s 0.3s;
+      // transition: color 0.3s 0.3s;
 
       span {
 

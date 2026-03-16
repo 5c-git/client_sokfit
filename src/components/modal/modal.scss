@@ -62,7 +62,9 @@
     border: 0;
     color: $Black;
     background-color: transparent;
-    transition: transform 0.3s;
+    transition:
+      transform 0.5s,
+      color 0.3s;
     will-change: transform;
     outline: none;
     cursor: pointer;
@@ -78,6 +80,7 @@
 
     &:hover {
       @media(min-width: $desktop-only) {
+        color: $Main_2;
         transform: rotate(90deg);
       }
     }
