@@ -12502,13 +12502,14 @@ Swiper.use([Resize, Observer]);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
+  Ij: () => (/* reexport */ Autoplay),
   _R: () => (/* reexport */ EffectFade),
   Vx: () => (/* reexport */ Navigation),
   dK: () => (/* reexport */ Pagination),
   Ze: () => (/* reexport */ Scrollbar)
 });
 
-// UNUSED EXPORTS: A11y, Autoplay, Controller, EffectCards, EffectCoverflow, EffectCreative, EffectCube, EffectFlip, FreeMode, Grid, HashNavigation, History, Keyboard, Manipulation, Mousewheel, Parallax, Thumbs, Virtual, Zoom
+// UNUSED EXPORTS: A11y, Controller, EffectCards, EffectCoverflow, EffectCreative, EffectCube, EffectFlip, FreeMode, Grid, HashNavigation, History, Keyboard, Manipulation, Mousewheel, Parallax, Thumbs, Virtual, Zoom
 
 // EXTERNAL MODULE: ./node_modules/swiper/shared/ssr-window.esm.mjs
 var ssr_window_esm = __webpack_require__(2375);
@@ -16287,7 +16288,7 @@ function Autoplay({
   };
   const onVisibilityChange = () => {
     if (swiper.destroyed || !swiper.autoplay.running) return;
-    const document = getDocument();
+    const document = (0,ssr_window_esm.g)();
     if (document.visibilityState === 'hidden') {
       pausedByInteraction = true;
       pause(true);
@@ -16323,11 +16324,11 @@ function Autoplay({
     }
   };
   const attachDocumentEvents = () => {
-    const document = getDocument();
+    const document = (0,ssr_window_esm.g)();
     document.addEventListener('visibilitychange', onVisibilityChange);
   };
   const detachDocumentEvents = () => {
-    const document = getDocument();
+    const document = (0,ssr_window_esm.g)();
     document.removeEventListener('visibilitychange', onVisibilityChange);
   };
   on('init', () => {

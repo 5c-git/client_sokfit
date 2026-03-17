@@ -1,0 +1,148 @@
+.slider {
+  position: relative;
+
+  &:hover {
+    @media(min-width: $desktop-only) {
+
+      .slider__buttons {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  .zone-card {
+    height: 100%;
+  }
+
+  &__buttons {
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    left: -30px;
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition:
+      opacity 0.3s,
+      visibility 0.3s;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-50%);
+    pointer-events: none;
+
+    @media(max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: $Black;
+    transition: color 0.3s;
+    background: 0;
+    pointer-events: auto;
+    cursor: pointer;
+
+    &:not(:disabled):hover {
+      @media(min-width: $desktop-only) {
+        color: $Main_2;
+      }
+    }
+
+    &:disabled {
+      color: $Grey_3;
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    svg {
+      display: block;
+      width: 60px;
+      height: 60px;
+      fill: currentcolor;
+      stroke: currentcolor;
+
+      @media(max-width: $phone) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &--prev {
+      transform: rotate(-90deg);
+    }
+
+    &--next {
+      transform: rotate(90deg);
+    }
+  }
+
+
+  &__swiper {
+    position: relative;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+  }
+
+  &__item {
+    width: unset;
+    height: unset;
+    margin-right: 30px;
+
+    @media(max-width: $phone) {
+      margin-right: 15px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__scrollbar {
+    display: block;
+    height: 4px;
+    margin-top: 40px;
+    border-radius: 4px;
+    background-color: rgba($color: $Black, $alpha: 20%);
+
+    @media(max-width: $tablet) {
+      margin-top: 16px;
+    }
+  }
+
+  &__scrollbar-drag {
+    height: 100%;
+    border-radius: 4px;
+    background-color: $Black;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      @media(min-width: $desktop-only) {
+        background-color: $Main_2;
+      }
+    }
+  }
+
+  &__banner {
+    margin: 0;
+    padding: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+  }
+}

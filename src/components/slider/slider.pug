@@ -1,0 +1,119 @@
+include ../zone-card/zone-card
+
+mixin slider(props)
+
+  section.slider(
+    class=props.mixin
+    data-slider=props.type
+    data-autoplay=props.autoplay
+  )
+    div.slider__buttons
+      button(type='button' aria-label='Предыдущий слайд.').slider__button.slider__button--prev
+        svg(width="59" height="59" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg")
+          use(href='#icon-up')
+
+      button(type='button' aria-label='Следующий слайд.').slider__button.slider__button--next
+        svg(width="59" height="59" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg")
+          use(href='#icon-up')
+  
+    div.swiper.slider__swiper
+
+      ul.swiper-wrapper.slider__list
+        li.swiper-slide.slider__item
+          if props.banner
+            figure.slider__banner
+              img(src="./assets/images/wallpaper/wallpaper-1.PNG" alt="")
+              
+          if props.zone
+            +zone-card({
+              src: './assets/images/fun-1.jpg',
+              title: 'Велнес-куратор',
+              text: 'Индивидуальные программы, созданные на основе wellness-аудита и регулярно корректируемые.  Комплексный подход, где тренировки интегрированы с питанием, восстановлением и комьюнити. Технологичные решения для контроля прогресса и удобства. Гибкость форматов под ваш образ жизни. Мы работаем не с изолированными тренировками, а с персональной "картой здоровья", где каждый элемент усиливает другой. Это не просто набор упражнений, а индивидуальный маршрут к цели клиента.',
+            })
+            
+        li.swiper-slide.slider__item
+          if props.banner
+            figure.slider__banner
+              img(src="./assets/images/wallpaper/wallpaper-15.PNG" alt="")
+              
+          if props.zone
+            +zone-card({
+              src: './assets/images/fun-4.jpg',
+              title: 'Тренажерный зал',
+              text: 'Питание как терапия (СОК Баланс) Наш ресторан СОК Баланс — продолжение тренировок. Если обычный ресторан кормит, то СОК Баланс программирует ваше восстановление. В акценте - персонализация питания в зависимости от особенностей здоровья и тренировочного процесса. СОК Баланс — это место, где гастрономия становится точной наукой. Мы не просто кормим — мы программируем ваши результаты через питание.',
+            })
+            
+        li.swiper-slide.slider__item
+          if props.banner
+            figure.slider__banner
+              img(src="./assets/images/wallpaper/wallpaper-16.PNG" alt="")
+              
+          if props.zone
+            +zone-card({
+              src: './assets/images/fun-2.jpg',
+              title: 'Групповые программы',
+              text: 'В СОК ВЕЛНЕС восстановление — это система. Вы  получаете доступ к бесплатному термальнобанному комплексу с базовыми услугам (бассейны, сауны, хамам, снежная комната, джакузи, зона релакса), а для углублённой работы с телом работает премиальный SPA-салон СОК Бьюти — наш научный центр восстановления, где каждая процедура подбирается на основе данных вашего wellness аудита. Это не просто релакс, а часть вашей тренировочной программы.',
+            })
+            
+        li.swiper-slide.slider__item
+          if props.banner
+            figure.slider__banner
+              img(src="./assets/images/wallpaper/wallpaper-14.PNG" alt="")
+              
+          if props.zone
+            +zone-card({
+              src: './assets/images/fun-3.jpg',
+              title: 'Аквазона',
+              text: 'Только групповые занятия с понятной программой и поддержка тренера. Также есть возможность заниматься с тренером индивидуально.',
+            })
+            
+        li.swiper-slide.slider__item
+          if props.banner
+            figure.slider__banner
+              img(src="./assets/images/wallpaper/wallpaper-5.PNG" alt="")
+              
+          if props.zone
+            +zone-card({
+              src: './assets/images/fun-5.jpg',
+              title: 'Зал единоборств',
+              text: 'Занятия проходят в мини-группах, тренер может уделить время каждой гостье и адаптировать нагрузку.',
+            })
+            
+        li.swiper-slide.slider__item
+          if props.banner
+            figure.slider__banner
+              img(src="./assets/images/wallpaper/wallpaper-8.PNG" alt="")
+              
+          if props.zone
+            +zone-card({
+              src: './assets/images/fun-4.jpg',
+              title: 'Детский фитнес',
+              text: 'Столько проходит каждый тренер перед началом работы в наших клубах. Мы разработали специальную программу и даже получили образовательную лицензию.',
+            })
+            
+        li.swiper-slide.slider__item
+          if props.banner
+            figure.slider__banner
+              img(src="./assets/images/wallpaper/wallpaper-10.PNG" alt="")
+              
+          if props.zone
+            +zone-card({
+              src: './assets/images/fun-3.jpg',
+              title: 'Салон красоты',
+              text: 'Клубы работают с раннего утра до позднего вечера, чтобы вы точно нашли подходящий слот для тренировки. В один час может проходить до 5 занятий.',
+            })
+            
+        li.swiper-slide.slider__item
+          if props.banner
+            figure.slider__banner
+              img(src="./assets/images/wallpaper/wallpaper-10.PNG" alt="")
+              
+          if props.zone
+            +zone-card({
+              src: './assets/images/fun-2.jpg',
+              title: 'Ресторан',
+              text: 'Не просто взвешивание и замеры, а функциональные тесты. На их основе тренер построит ваш персональный фитнес-план именно для вашей цели.',
+            })
+
+      
+    div.slider__scrollbar

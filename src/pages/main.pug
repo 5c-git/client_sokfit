@@ -1,13 +1,17 @@
 extends ../templates/default
 
 include ../components/moving/moving
+include ../components/request-wrapper/request-wrapper
 
 block main
 
   include ../components/banner/banner
 
   +layout({})
-    include ../components/request-wrapper/request-wrapper
+    +request-wrapper({
+      slider: true,
+      title: 'Оставьте заявку',
+    })
 
   //- include ../components/start/start
 

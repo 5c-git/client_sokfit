@@ -1,0 +1,9 @@
+mixin zone-card(props)
+  div.zone-card
+    figure.zone-card__banner
+      img(src=props.src width='220' height='220' alt="")
+    div.zone-card__main
+      span.zone-card__title=props.title
+      div.zone-card__content
+        p!=props.text
+      button(type='button').zone-card__more Показать ещё

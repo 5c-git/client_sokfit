@@ -16,6 +16,34 @@
     padding-right: 40px;
   }
 
+  .zone-card {
+    width: 100%;
+    flex-direction: row;
+    padding: 0;
+    background: 0;
+
+    @media(max-width: $phone) {
+      flex-direction: column;
+    }
+
+    &__content {
+      display: unset;
+    }
+
+    &__more {
+      display: none;
+    }
+
+    &__banner {
+      width: 300px;
+
+      @media(max-width: $tablet) {
+        width: 220px;
+        height: 220px;
+      }
+    }
+  }
+
   &__container {
     position: relative;
     padding: 30px;

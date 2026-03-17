@@ -106,6 +106,7 @@ var map = {
 	"./request-wrapper/request-wrapper.js": 4473,
 	"./request/request.js": 5745,
 	"./service-card/service-card.js": 8043,
+	"./slider/slider.js": 5073,
 	"./socials/socials.js": 4741,
 	"./start/start.js": 6285,
 	"./tabs/tabs.js": 3519,
@@ -119,6 +120,7 @@ var map = {
 	"./widget/widget.js": 2079,
 	"./window/window.js": 6919,
 	"./workout-card/workout-card.js": 5155,
+	"./zone-card/zone-card.js": 1945,
 	"components/accordion/accordion.js": 5097,
 	"components/alarm/alarm.js": 5405,
 	"components/alert-wrapper/alert-wrapper.js": 3937,
@@ -178,6 +180,7 @@ var map = {
 	"components/request-wrapper/request-wrapper.js": 4473,
 	"components/request/request.js": 5745,
 	"components/service-card/service-card.js": 8043,
+	"components/slider/slider.js": 5073,
 	"components/socials/socials.js": 4741,
 	"components/start/start.js": 6285,
 	"components/tabs/tabs.js": 3519,
@@ -190,7 +193,8 @@ var map = {
 	"components/video/video.js": 2305,
 	"components/widget/widget.js": 2079,
 	"components/window/window.js": 6919,
-	"components/workout-card/workout-card.js": 5155
+	"components/workout-card/workout-card.js": 5155,
+	"components/zone-card/zone-card.js": 1945
 };
 
 
@@ -876,6 +880,42 @@ var symbol = new (_node_modules_svg_baker_runtime_browser_symbol_js__WEBPACK_IMP
 });
 var result = _node_modules_svg_sprite_loader_runtime_browser_sprite_build_js__WEBPACK_IMPORTED_MODULE_1___default().add(symbol);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("#" + symbol.id);
+
+/***/ },
+
+/***/ 1945
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _popUp_popUp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9417);
+
+
+const cards = document.querySelectorAll(".zone-card");
+cards.forEach((card) => {
+  const toggle = card.querySelector(".zone-card__more");
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      const template = card.cloneNode(true);
+      (0,_popUp_popUp__WEBPACK_IMPORTED_MODULE_0__.summonPopUp)({
+        template: "#modal--more",
+        blockScroll: true,
+        overlay: {
+          use: true,
+          closeOnClick: true
+        },
+        esc: {
+          closeOnEsc: true
+        }
+      });
+      const modal = document.querySelector(".modal");
+      if (!modal) return;
+      const wrapper = modal.querySelector(".modal__wrapper");
+      wrapper.appendChild(template);
+    });
+  }
+});
+
 
 /***/ },
 
@@ -2231,6 +2271,93 @@ if (up) {
     }
   });
 }
+
+
+/***/ },
+
+/***/ 5073
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1236);
+/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1708);
+var __defProp = Object.defineProperty;
+var __defProps = Object.defineProperties;
+var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols = Object.getOwnPropertySymbols;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __propIsEnum = Object.prototype.propertyIsEnumerable;
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues = (a, b) => {
+  for (var prop in b || (b = {}))
+    if (__hasOwnProp.call(b, prop))
+      __defNormalProp(a, prop, b[prop]);
+  if (__getOwnPropSymbols)
+    for (var prop of __getOwnPropSymbols(b)) {
+      if (__propIsEnum.call(b, prop))
+        __defNormalProp(a, prop, b[prop]);
+    }
+  return a;
+};
+var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
+
+
+
+const sliderInit = (container) => {
+  if (!container) return;
+  const slider = container;
+  const swiper = slider.querySelector(".swiper");
+  if (!swiper) return;
+  if (swiper.swiperInstance) return;
+  const buttonPrev = slider.querySelector(".slider__button--prev");
+  const buttonNext = slider.querySelector(".slider__button--next");
+  const scrollbar = slider.querySelector(".slider__scrollbar");
+  const type = slider.dataset.slider;
+  const autoplayAttr = slider.dataset.autoplay;
+  const isCarousel = type === "carousel";
+  const modeConfig = isCarousel ? {
+    slidesPerView: "auto",
+    spaceBetween: 0
+  } : {
+    slidesPerView: 1,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true
+    }
+  };
+  const autoplayConfig = autoplayAttr ? {
+    autoplay: {
+      delay: 5e3,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    }
+  } : {};
+  const swiperNolint = new swiper__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A(swiper, __spreadProps(__spreadValues(__spreadValues({
+    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__/* .Navigation */ .Vx, swiper_modules__WEBPACK_IMPORTED_MODULE_1__/* .Scrollbar */ .Ze, swiper_modules__WEBPACK_IMPORTED_MODULE_1__/* .EffectFade */ ._R, swiper_modules__WEBPACK_IMPORTED_MODULE_1__/* .Autoplay */ .Ij],
+    slidesPerView: "auto",
+    spaceBetween: 0,
+    loop: false
+  }, modeConfig), autoplayConfig), {
+    // touchEventsTarget: 'container',
+    scrollbar: {
+      el: scrollbar,
+      dragClass: "slider__scrollbar-drag",
+      draggable: true
+    },
+    navigation: {
+      prevEl: buttonPrev,
+      nextEl: buttonNext,
+      disabledClass: "slider__button--disabled"
+    },
+    breakpoints: {}
+  }));
+  swiper.swiperInstance = swiperNolint;
+};
+const sliders = document.querySelectorAll(".slider");
+sliders.forEach((el) => {
+  sliderInit(el);
+});
 
 
 /***/ },

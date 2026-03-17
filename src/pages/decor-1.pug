@@ -1,0 +1,38 @@
+extends ../templates/default
+
+include ../components/request-wrapper/request-wrapper
+include ../components/slider/slider
+
+block main
+
+  +layout({})
+    +request-wrapper({
+      slider: true,
+      title: 'Оставьте заявку',
+    })
+
+  +layout({})
+    +request-wrapper({
+      banner: true,
+      title: 'Оставьте заявку',
+    })
+
+
+  +layout({})
+    +request({
+      title: 'Запись на пробную тренировку в клуб',
+    })
+
+
+  +layout({})
+    +slider({
+      type: 'carousel',
+      zone: true,
+    })
+
+
+  +layout({})
+    +slider({
+      banner: true,
+    })
+

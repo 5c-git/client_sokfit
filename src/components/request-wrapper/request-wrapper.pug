@@ -1,15 +1,25 @@
 include ../request/request
+include ../slider/slider
 
-div.request-wrapper
+mixin request-wrapper(props)
 
-  figure.request-wrapper__banner
-    img(src="./assets/images/image-2.jpg" alt="")
+  div.request-wrapper
 
-  div.request-wrapper__main
-    div.request-wrapper__content
-      +request({
-        title: 'Оставьте заявку',
-      })
+    div.request-wrapper__media
+      if props.slider
+        +slider({
+          autoplay: true,
+          banner: true,
+        })
+      if props.banner
+        figure 
+          img(src="./assets/images/image-4.jpg", alt="")
+
+    div.request-wrapper__main
+      div.request-wrapper__content
+        +request({
+          title: props.title,
+        })
 
 
 
