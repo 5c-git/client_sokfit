@@ -62,6 +62,7 @@ var map = {
 	"./breadcrumbs/breadcrumbs.js": 4073,
 	"./button/button.js": 2271,
 	"./checkbox/checkbox.js": 7945,
+	"./club-card-new/club-card-new.js": 3945,
 	"./club-card/club-card.js": 4329,
 	"./components.js": 2820,
 	"./contacts-map/contacts-map.js": 9035,
@@ -136,6 +137,7 @@ var map = {
 	"components/breadcrumbs/breadcrumbs.js": 4073,
 	"components/button/button.js": 2271,
 	"components/checkbox/checkbox.js": 7945,
+	"components/club-card-new/club-card-new.js": 3945,
 	"components/club-card/club-card.js": 4329,
 	"components/components.js": 2820,
 	"components/contacts-map/contacts-map.js": 9035,
@@ -1553,6 +1555,16 @@ var result = _node_modules_svg_sprite_loader_runtime_browser_sprite_build_js__WE
 /***/ },
 
 /***/ 3937
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
+
+/***/ },
+
+/***/ 3945
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

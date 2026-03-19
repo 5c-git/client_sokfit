@@ -882,10 +882,10 @@ footer:not(.footer) {
 @charset "UTF-8";
 /* stylelint-disable */
 /* stylelint-enable */
-.article h2:first-child, .article h3:first-child, .article h4:first-child, .article h5:first-child, .article h6:first-child, .article p:first-child, .article b:first-child, .article ul:first-child, .article ol:first-child, .article a:first-child, .article figure:first-child, .article .article__table:first-child, .article .article__quote:first-child, .article .article__grid:first-child, .article .video:first-child {
+.article h2:not([class]):first-child, .article h3:not([class]):first-child, .article h4:not([class]):first-child, .article h5:not([class]):first-child, .article h6:not([class]):first-child, .article p:not([class]):first-child, .article b:not([class]):first-child, .article ul:not([class]):first-child, .article ol:not([class]):first-child, .article a:not([class]):first-child, .article figure:first-child, .article .article__table:first-child, .article .article__quote:first-child, .article .article__grid:first-child, .article .video:first-child {
   margin-top: 0;
 }
-.article h2:last-child, .article h3:last-child, .article h4:last-child, .article h5:last-child, .article h6:last-child, .article p:last-child, .article b:last-child, .article ul:last-child, .article ol:last-child, .article a:last-child, .article figure:last-child, .article .article__table:last-child, .article .article__quote:last-child, .article .article__grid:last-child, .article .video:last-child {
+.article h2:not([class]):last-child, .article h3:not([class]):last-child, .article h4:not([class]):last-child, .article h5:not([class]):last-child, .article h6:not([class]):last-child, .article p:not([class]):last-child, .article b:not([class]):last-child, .article ul:not([class]):last-child, .article ol:not([class]):last-child, .article a:not([class]):last-child, .article figure:last-child, .article .article__table:last-child, .article .article__quote:last-child, .article .article__grid:last-child, .article .video:last-child {
   margin-bottom: 0;
 }
 .article figure {
@@ -1044,7 +1044,7 @@ footer:not(.footer) {
     margin-bottom: 12px;
   }
 }
-.article p {
+.article p:not([class]) {
   font-family: "Inter";
   font-size: 20px;
   font-weight: 400;
@@ -1052,22 +1052,22 @@ footer:not(.footer) {
   line-height: 25px;
 }
 @media (max-width: 767px) {
-  .article p {
+  .article p:not([class]) {
     font-size: 14px;
     line-height: 17px;
   }
 }
-.article p {
+.article p:not([class]) {
   max-width: 850px;
   margin: 0;
   margin-bottom: 15px;
 }
 @media (max-width: 767px) {
-  .article p {
+  .article p:not([class]) {
     margin-bottom: 10px;
   }
 }
-.article p b {
+.article p:not([class]) b {
   display: inline;
   font-weight: 700;
 }
@@ -1096,17 +1096,17 @@ footer:not(.footer) {
     margin-bottom: 16px;
   }
 }
-.article a {
+.article a:not([class]) {
   text-decoration: underline;
   color: #5BC357;
 }
 @media (min-width: 992px) {
-  .article a:hover {
+  .article a:not([class]):hover {
     text-decoration: none;
   }
 }
-.article ul,
-.article ol {
+.article ul:not([class]),
+.article ol:not([class]) {
   max-width: 850px;
   margin: 0;
   margin-top: 15px;
@@ -1115,14 +1115,14 @@ footer:not(.footer) {
   list-style: none;
 }
 @media (max-width: 767px) {
-  .article ul,
-  .article ol {
+  .article ul:not([class]),
+  .article ol:not([class]) {
     margin-top: 16px;
     margin-bottom: 16px;
   }
 }
-.article ul li,
-.article ol li {
+.article ul:not([class]) li,
+.article ol:not([class]) li {
   font-family: "Inter";
   font-size: 20px;
   font-weight: 400;
@@ -1130,14 +1130,14 @@ footer:not(.footer) {
   line-height: 25px;
 }
 @media (max-width: 767px) {
-  .article ul li,
-  .article ol li {
+  .article ul:not([class]) li,
+  .article ol:not([class]) li {
     font-size: 14px;
     line-height: 17px;
   }
 }
-.article ul li,
-.article ol li {
+.article ul:not([class]) li,
+.article ol:not([class]) li {
   position: relative;
   margin: 0;
   margin-bottom: 5px;
@@ -1145,18 +1145,18 @@ footer:not(.footer) {
   padding-left: 20px;
 }
 @media (max-width: 767px) {
-  .article ul li,
-  .article ol li {
+  .article ul:not([class]) li,
+  .article ol:not([class]) li {
     margin-bottom: 5px;
     padding-left: 20px;
   }
 }
-.article ul li:last-of-type,
-.article ol li:last-of-type {
+.article ul:not([class]) li:last-of-type,
+.article ol:not([class]) li:last-of-type {
   margin-bottom: 0;
 }
-.article ul li:before,
-.article ol li:before {
+.article ul:not([class]) li:before,
+.article ol:not([class]) li:before {
   position: absolute;
   left: 0;
   font-size: 120%;
@@ -1952,6 +1952,156 @@ footer:not(.footer) {
   .checkbox__footer {
     padding-left: 30px;
   }
+}
+@charset "UTF-8";
+/* stylelint-disable */
+/* stylelint-enable */
+.club-card-new {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  color: #000000;
+  background-color: #FFFFFF;
+  border: 1px solid #7A7A7A;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.club-card-new__background {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  user-select: none;
+}
+.club-card-new__background img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+.club-card-new__main {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 25px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-grow: 1;
+}
+@media (max-width: 767px) {
+  .club-card-new__main {
+    font-size: 14px;
+    gap: 8px;
+  }
+}
+.club-card-new__main p {
+  margin: 0;
+}
+.club-card-new__main ul,
+.club-card-new__main ol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 5px;
+}
+.club-card-new__main li {
+  position: relative;
+  padding-left: 18px;
+}
+@media (max-width: 767px) {
+  .club-card-new__main li {
+    padding-left: 14px;
+  }
+}
+.club-card-new__main li:before {
+  position: absolute;
+  left: 0;
+  font-size: 150%;
+  line-height: 1;
+  font-weight: 700;
+  content: "•";
+}
+.club-card-new__title {
+  font-family: "EuropeExt";
+  font-size: 30px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 38px;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .club-card-new__title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+.club-card-new__title {
+  margin: 0;
+}
+.club-card-new__description {
+  font-family: "EuropeExt";
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .club-card-new__description {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+.club-card-new__description {
+  margin: 0;
+  color: #ACACAC;
+}
+.club-card-new__time {
+  font-family: "EuropeExt";
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .club-card-new__time {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+.club-card-new__time {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .club-card-new__time {
+    font-size: 14px;
+    line-height: 1.2;
+    gap: 5px;
+  }
+}
+.club-card-new__time em {
+  font-style: normal;
+  color: #7A7A7A;
+}
+.club-card-new__action {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  gap: 16px;
 }
 @charset "UTF-8";
 /* stylelint-disable */
@@ -7587,6 +7737,17 @@ footer:not(.footer) {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.request__actions {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .request__actions {
+    grid-auto-flow: row;
+    gap: 12px;
+  }
 }
 /* stylelint-disable */
 /* stylelint-enable */

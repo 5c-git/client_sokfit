@@ -81,4 +81,15 @@
     align-items: center;
     gap: 10px;
   }
+
+  &__actions {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+
+    @media(max-width: $phone) {
+      grid-auto-flow: row;
+      gap: 12px;
+    }
+  }
 }

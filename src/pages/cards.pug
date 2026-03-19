@@ -6,9 +6,46 @@ block main
     title: 'Клубные карты'
   })
 
-  +layout({
-    column: true,
+  +tabs({
+    tabs: [
+      {
+        active: true,
+        link: 'Все карты'
+      },
+      {
+        link: 'Индивидуальные карты для взрослых'
+      },
+      {
+        link: 'Семейные карты'
+      },
+      {
+        link: 'Детские карты'
+      },
+    ]
   })
-    include ../components/club-card/club-card
+
+  +direction-tabs({
+    tabs: [
+      {
+        active: true,
+        link: 'Все карты'
+      },
+      {
+        link: 'Индивидуальные карты для взрослых'
+      },
+      {
+        link: 'Семейные карты'
+      },
+      {
+        link: 'Детские карты'
+      },
+    ]
+  })
+
+  +layout({
+    grid3: true,
+    pagination: true,
+  })
+    include ../components/club-card-new/club-card-new
 
   include ../components/bottom-nav/bottom-nav
