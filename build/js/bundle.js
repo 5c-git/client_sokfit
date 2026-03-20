@@ -106,6 +106,7 @@ var map = {
 	"./question/question.js": 4227,
 	"./request-wrapper/request-wrapper.js": 4473,
 	"./request/request.js": 5745,
+	"./review-card/review-card.js": 8693,
 	"./service-card/service-card.js": 8043,
 	"./slider/slider.js": 5073,
 	"./socials/socials.js": 4741,
@@ -181,6 +182,7 @@ var map = {
 	"components/question/question.js": 4227,
 	"components/request-wrapper/request-wrapper.js": 4473,
 	"components/request/request.js": 5745,
+	"components/review-card/review-card.js": 8693,
 	"components/service-card/service-card.js": 8043,
 	"components/slider/slider.js": 5073,
 	"components/socials/socials.js": 4741,
@@ -3543,6 +3545,42 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
+
+
+/***/ },
+
+/***/ 8693
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _popUp_popUp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9417);
+
+
+const cards = document.querySelectorAll(".review-card");
+cards.forEach((card) => {
+  const toggle = card.querySelector(".review-card__more");
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      const template = card.cloneNode(true);
+      (0,_popUp_popUp__WEBPACK_IMPORTED_MODULE_0__.summonPopUp)({
+        template: "#modal--more",
+        blockScroll: true,
+        overlay: {
+          use: true,
+          closeOnClick: true
+        },
+        esc: {
+          closeOnEsc: true
+        }
+      });
+      const modal = document.querySelector(".modal");
+      if (!modal) return;
+      const wrapper = modal.querySelector(".modal__wrapper");
+      wrapper.appendChild(template);
+    });
+  }
+});
 
 
 /***/ },

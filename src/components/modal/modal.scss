@@ -16,6 +16,7 @@
     padding-right: 40px;
   }
 
+  .review-card,
   .zone-card {
     width: 100%;
     flex-direction: row;
@@ -77,8 +78,8 @@
 
   &__close {
     position: absolute;
-    top: 40px;
-    right: 40px;
+    top: 10px;
+    right: 10px;
     z-index: 5;
     display: flex;
     width: 40px;

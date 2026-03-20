@@ -246,9 +246,64 @@
           <section class="layout">
             <div class="container"> 
               <div class="layout__wrapper">
+                <h2 class="layout__title">Запись на пробную<br> тренировку в клуб</h2>
                 <div class="layout__list">
                       <div class="request">
-                        <h2 class="request__title">Запись на пробную тренировку в клуб</h2>
+                        <form class="request__form" action="#" method="post">
+                          <div class="request__fields">
+                            <div class="request__field">
+                                  <div class="field">
+                                    <label class="validator__description field__label" for="name"></label>
+                                    <div class="field__inner">
+                                      <input class="validator__required field__input" type="text" name="name" id="name" autocomplete="off" autocapitalize="off" placeholder="Имя">
+                                    </div>
+                                    <div class="validator__error-container field__error"></div>
+                                  </div>
+                            </div>
+                            <div class="request__field"> 
+                                  <div class="field">
+                                    <label class="validator__description field__label" for="Phone Number"></label>
+                                    <div class="field__inner">
+                                      <input class="validator__phone field__input" type="tel" name="Phone Number" id="Phone Number" autocomplete="off" autocapitalize="off" placeholder="Телефон">
+                                    </div>
+                                    <div class="validator__error-container field__error"></div>
+                                  </div>
+                            </div>
+                            <div class="request__field">
+                              <button class="button button--black" type="submit">Отправить</button>
+                            </div>
+                          </div>
+                          <div class="request__legal">
+                            <div class="request__legal-check">
+                                  <div class="checkbox">
+                                    <label class="checkbox__label">
+                                      <input class="visually-hidden" type="checkbox" name="legal-1" required><span class="checkbox__box"></span>
+                                    </label>
+                                  </div>
+                              <p>Я соглашаюсь на <a href="#" target="_blank">обработку персональных данных </a>  согласно  <a href="#" target="_blank"> политике конфиденциальности</a>.</p>
+                            </div>
+                            <div class="request__legal-check">
+                                  <div class="checkbox">
+                                    <label class="checkbox__label">
+                                      <input class="visually-hidden" type="checkbox" name="legal-2" required><span class="checkbox__box"></span>
+                                    </label>
+                                  </div>
+                              <p>Я даю  <a href="#" target="_blank"> cогласие </a>  на получение информационной и рекламной рассылки.</p>
+                            </div><span>* сайт собирает персональные данные с помощью сервиса аналитики Яндекс метрика для анализа посещаемости сайта, улучшения его функциональности, таргетинга рекламы</span>
+                          </div>
+                          <div class="request__actions"><a class="button" href="#">Написать в VK</a><a class="button" href="#">Написать в ТГ </a></div>
+                        </form>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="layout">
+            <div class="container"> 
+              <div class="layout__wrapper">
+                <div class="layout__list">
+                      <div class="request">
+                        <h2 class="request__title">Запись на пробную<br> тренировку в клуб</h2>
                         <form class="request__form" action="#" method="post">
                           <div class="request__fields">
                             <div class="request__field">
@@ -467,6 +522,24 @@
           <section class="layout">
             <div class="container"> 
               <div class="layout__wrapper">
+                <h2 class="layout__title">Выбери свою клубную карту</h2>
+                <div class="layout__list">
+                      <section class="article">
+                        <div class="article__grid">
+                          <figure><img src="./assets/images/image-15.jpg" alt=""></figure>
+                          <div>
+                            <p>В целом, конечно, постоянный количественный рост и сфера нашей активности является качественно новой ступенью существующих финансовых и административных условий. Кстати, стремящиеся вытеснить традиционное производство, нанотехнологии подвергнуты целой серии независимых исследований.</p>
+                            <p><a href="#">Смотреть все карты</a></p><a class="button" href="#">Смотреть все карты</a>
+                          </div>
+                        </div>
+                      </section>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="layout">
+            <div class="container"> 
+              <div class="layout__wrapper">
                 <div class="layout__list">
                       <section class="article">
                         <div class="article__grid">
@@ -477,6 +550,110 @@
                             <p><a href="#">Смотреть все карты</a></p><a class="button" href="#">Смотреть все карты</a>
                           </div>
                         </div>
+                      </section>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="layout">
+            <div class="container"> 
+              <div class="layout__wrapper">
+                <h2 class="layout__title">Отзывы</h2>
+                <div class="layout__list">
+                      <section class="slider" data-slider="carousel">
+                        <div class="slider__buttons">
+                          <button class="slider__button slider__button--prev" type="button" aria-label="Предыдущий слайд.">
+                            <svg width="59" height="59" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#icon-up"></use>
+                            </svg>
+                          </button>
+                          <button class="slider__button slider__button--next" type="button" aria-label="Следующий слайд.">
+                            <svg width="59" height="59" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#icon-up"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="swiper slider__swiper">
+                          <ul class="swiper-wrapper slider__list">
+                            <li class="swiper-slide slider__item">
+                                  <div class="review-card">
+                                    <figure class="review-card__banner"><img src="./assets/images/fun-1.jpg" width="220" height="220" alt=""></figure>
+                                    <div class="review-card__body">
+                                      <div class="review-card__main">
+                                        <div class="review-card__content">
+                                          <p>Мой профессиональный путь не был простым и лёгким, но это интересный путь однозначно!<br>Вышла на должность менеджера по продажам в г.. Волгоград. Спустя год работы в компании стала администратором. Проработав 5 лет я поняла, что выросла. Я попросила перевод в Москву и уже через 2 недели поменяла город своей карьеры. Никогда не приходилось мне искать работу, она сама меня находила.<br>И я благодарна судьбе за то, что она всегда окружала меня людьми, которые были моим «фейс-контролем», «гарантом», «проводником» в мир профессии и новой работы.</p>
+                                        </div>
+                                        <button class="review-card__more" type="button">Показать ещё</button>
+                                      </div>
+                                      <div class="review-card__footer"><span class="review-card__name">Деркач Юлия</span><span class="review-card__about"></span></div>
+                                    </div>
+                                  </div>
+                            </li>
+                            <li class="swiper-slide slider__item">
+                                  <div class="review-card">
+                                    <figure class="review-card__banner"><img src="./assets/images/fun-2.jpg" width="220" height="220" alt=""></figure>
+                                    <div class="review-card__body">
+                                      <div class="review-card__main">
+                                        <div class="review-card__content">
+                                          <p>Мой профессиональный путь не был простым и лёгким, но это интересный путь однозначно!<br>Вышла на должность менеджера по продажам в г.</p>
+                                        </div>
+                                        <button class="review-card__more" type="button">Показать ещё</button>
+                                      </div>
+                                      <div class="review-card__footer"><span class="review-card__name">Деркач Юлия</span><span class="review-card__about"></span></div>
+                                    </div>
+                                  </div>
+                            </li>
+                            <li class="swiper-slide slider__item">
+                                  <div class="review-card">
+                                    <figure class="review-card__banner"><img src="./assets/images/fun-3.jpg" width="220" height="220" alt=""></figure>
+                                    <div class="review-card__body">
+                                      <div class="review-card__main">
+                                        <div class="review-card__content">
+                                          <p>Мой путь в компании начался в 2021 году, когда мне было всего 20 лет. В тот момент у меня было главное — амбиции, энергия и желание делать этот мир лучше . «Эстетика» стала пространством, где эти качества обрели практическое воплощение.<br>Уже через 9 месяцев я получила возможность перейти на позицию старшего менеджера в другом салоне. Это стало для меня подтверждением того, что стремление к развитию, ответственность и искренний интерес к делу всегда находят отклик.Работа в «Эстетике» для меня — это больше, чем профессия. Это путь личностного и профессионального роста, возможность быть частью бренда, который задаёт стандарты премиального сервиса и формирует культуру красоты. Каждый день я убеждаюсь: когда ты любишь своё дело, открываются новые горизонты, а рост и успех становятся естественным продолжением твоего пути.</p>
+                                        </div>
+                                        <button class="review-card__more" type="button">Показать ещё</button>
+                                      </div>
+                                      <div class="review-card__footer"><span class="review-card__name">Деркач Юлия</span><span class="review-card__about"></span></div>
+                                    </div>
+                                  </div>
+                            </li>
+                            <li class="swiper-slide slider__item">
+                                  <div class="review-card">
+                                    <figure class="review-card__banner"><img src="./assets/images/fun-4.jpg" width="220" height="220" alt=""></figure>
+                                    <div class="review-card__body">
+                                      <div class="review-card__main">
+                                        <div class="review-card__content">
+                                          <p>Мой путь в компании ESTETICA начался 11 лет назад. Тогда я была обычным менеджером по продажам и только мечтала о том, чтобы однажды достичь большего. <br>На сегодняшний день, я — администратор одного из лучших салонов в центре Москвы, и за каждым шагом моего роста стоит эта компания.ESTETICA подарила мне бесценный опыт: умение всегда стремиться выше, верить в собственные силы и при этом оставаться человеком. Всё это стало возможным благодаря невероятным людям рядом — настоящим профессионалам, которые делятся знаниями, поддерживают и вдохновляют.<br>Мой салон — это отражение моего внутреннего мира. Здесь я могу создавать красоту и стиль, помогая клиентам воплощать их мечты об идеальном интерьере.Я благодарна компании ESTETICA за то, что именно здесь я смогла раскрыть себя, обрести уверенность и стать профессионалом, для которого работа — это вдохновение и любовь к своему делу.</p>
+                                        </div>
+                                        <button class="review-card__more" type="button">Показать ещё</button>
+                                      </div>
+                                      <div class="review-card__footer"><span class="review-card__name">Деркач Юлия</span><span class="review-card__about"></span></div>
+                                    </div>
+                                  </div>
+                            </li>
+                            <li class="swiper-slide slider__item">
+                                  <div class="review-card">
+                                    <figure class="review-card__banner"><img src="./assets/images/fun-5.jpg" width="220" height="220" alt=""></figure>
+                                    <div class="review-card__body">
+                                      <div class="review-card__main">
+                                        <div class="review-card__content">
+                                          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                        </div>
+                                        <button class="review-card__more" type="button">Показать ещё</button>
+                                      </div>
+                                      <div class="review-card__footer"><span class="review-card__name">Деркач Юлия</span><span class="review-card__about"></span></div>
+                                    </div>
+                                  </div>
+                            </li>
+                            <li class="swiper-slide slider__item">
+                            </li>
+                            <li class="swiper-slide slider__item">
+                            </li>
+                            <li class="swiper-slide slider__item">
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="slider__scrollbar"></div>
                       </section>
                 </div>
               </div>

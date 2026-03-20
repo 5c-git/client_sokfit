@@ -18,9 +18,15 @@ block main
     })
 
 
+  +layout({
+    title: 'Запись на пробную<br> тренировку в клуб',
+  })
+    +request({})
+
+
   +layout({})
     +request({
-      title: 'Запись на пробную тренировку в клуб',
+      title: 'Запись на пробную<br> тренировку в клуб',
     })
 
 
@@ -30,13 +36,28 @@ block main
       zone: true,
     })
 
-
   +layout({})
     +slider({
       banner: true,
     })
 
-  +layout({})
+  +layout({
+    title: 'Выбери свою клубную карту',
+  })
     +article({
       cards: true,
     })
+
+  +layout({})
+    +article({
+      cards2: true,
+    })
+
+  +layout({
+    title: 'Отзывы',
+  })
+    +slider({
+      type: 'carousel',
+      review: true,
+    })
+

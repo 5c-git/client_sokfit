@@ -3,7 +3,8 @@ include ../checkbox/checkbox
 
 mixin request(props)
   div.request
-    h2.request__title=props.title
+    if props.title
+      h2.request__title!=props.title
     form(action="#" method='post').request__form
       div.request__fields
         div.request__field

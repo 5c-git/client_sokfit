@@ -1,0 +1,13 @@
+mixin review-card(props)
+  div.review-card
+    figure.review-card__banner
+      img(src=props.photo width='220' height='220' alt="")
+    div.review-card__body
+      div.review-card__main
+        div.review-card__content
+          p!=props.text
+        button(type='button').review-card__more Показать ещё
+      div.review-card__footer
+        span.review-card__name=props.name
+        span.review-card__about=props.about
+  

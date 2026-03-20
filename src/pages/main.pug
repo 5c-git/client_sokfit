@@ -29,7 +29,12 @@ block main
 
   include ../components/main-trainers/main-trainers
 
-  include ../components/main-cards/main-cards
+  +layout({
+    title: 'Выбери свою клубную карту',
+  })
+    +article({
+      cards: true,
+    })
 
   //- +moving({
   //-   ver2: true,
