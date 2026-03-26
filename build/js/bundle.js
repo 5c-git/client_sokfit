@@ -912,7 +912,7 @@ cards.forEach((card) => {
           closeOnEsc: true
         }
       });
-      const modal = document.querySelector(".modal");
+      const modal = document.querySelector(".modal--more");
       if (!modal) return;
       const wrapper = modal.querySelector(".modal__wrapper");
       wrapper.appendChild(template);
@@ -3574,7 +3574,7 @@ cards.forEach((card) => {
           closeOnEsc: true
         }
       });
-      const modal = document.querySelector(".modal");
+      const modal = document.querySelector(".modal--more");
       if (!modal) return;
       const wrapper = modal.querySelector(".modal__wrapper");
       wrapper.appendChild(template);

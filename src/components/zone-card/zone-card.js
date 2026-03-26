@@ -23,7 +23,7 @@ cards.forEach((card) => {
         },
       });
 
-      const modal = document.querySelector('.modal');
+      const modal = document.querySelector('.modal--more');
       if (!modal) return;
 
       const wrapper = modal.querySelector('.modal__wrapper');
