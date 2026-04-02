@@ -207,32 +207,3 @@
     }
   }
 }
-
-@keyframes modal-in {
-
-  from {
-    visibility: hidden;
-    opacity: 0;
-    transform: translateX(120%);
-  }
-
-  to {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-@keyframes modal-out {
-
-  from {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(0%);
-  }
-
-  to {
-    visibility: hidden;
-    opacity: 0;
-    transform: translateX(120%);
-  }
-}

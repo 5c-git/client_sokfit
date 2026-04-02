@@ -4,6 +4,9 @@ import Inputmask from 'inputmask';
 import Bouncer from 'formbouncerjs';
 import Choices from 'choices.js';
 
+// Хранилище инстансов Bouncer по формам
+const bouncerInstances = new WeakMap();
+
 
 // Тексты ошибок для Bouncer (fallback и стандартные кейсы).
 const validationMessages = {
@@ -78,6 +81,10 @@ const validateByRegexp = (field, regexp, min = 0, max = 225) => {
 // Инициализация кастомной валидации формы через Bouncer.
 const validateForm = (form) => {
   const formEl = document.querySelector(form);
+
+  // Если уже есть инстанс для этой формы — просто вернуть его
+  const existing = bouncerInstances.get(formEl);
+  if (existing) return existing;
 
   let validator = new Bouncer(form, {
     fieldClass: 'validator__input--error',
@@ -255,7 +262,7 @@ const validateForm = (form) => {
 
 
 // Маска для российского номера телефона.
-const maskPhone = (form) => {
+const maskPhone = (target) => {
   const mask = new Inputmask('+7 [(999) 999-99-99]', {
     autoUnmask: true,
     showMaskOnHover: false,
@@ -263,10 +270,23 @@ const maskPhone = (form) => {
     placeholder: '',
   });
 
-  document
-    .querySelector(form)
-    .querySelectorAll('.validator__phone')
-    .forEach((field) => mask.mask(field));
+  let containers = [];
+
+  if (typeof target === 'string') {
+    containers = document.querySelectorAll(target);
+  } else if (target instanceof Element) {
+    containers = [target];
+  } else if (target instanceof NodeList || Array.isArray(target)) {
+    containers = [...target];
+  } else {
+    return;
+  }
+
+  containers.forEach((container) => {
+    container
+      .querySelectorAll('.validator__phone')
+      .forEach((field) => mask.mask(field));
+  });
 };
 
 // Маска для иноземного номера телефона.

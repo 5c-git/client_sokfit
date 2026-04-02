@@ -3,16 +3,16 @@ include ../request-wrapper/request-wrapper
 mixin modal(props)
             
   if props.card
-    section.popUp.modal.modal--card
+    section.popUp.modal.modal--slide.modal--card
       div.popUp__overlay.modal__overlay
       section.popUp__container.modal__container
         div.popUp__wrapper.modal__wrapper
           button.popUp__close.modal__close
             span
-          +request-wrapper({
-            banner: true,
-            title: 'Оставьте заявку',
-          })
+          div.modal__main
+            +request-wrapper({
+              title: 'Оставьте заявку',
+            })
 
   
   if props.more
@@ -22,3 +22,5 @@ mixin modal(props)
         div.popUp__wrapper.modal__wrapper
           button.popUp__close.modal__close
             span
+
+          div.modal__main

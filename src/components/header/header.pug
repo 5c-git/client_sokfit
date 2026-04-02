@@ -6,15 +6,32 @@ header.header
   div.header__fixed
     div.container
       div.header__wrapper
+
         button(type='button').header__burger
           span
+
+        div.header__contacts
+          div
+            address г. Самара, ул. Мичурина, 98
+            a(href="tel:8 (846) 929-09-90").header__link 8 (846) 929-09-90
+          div.header__socials
+            +socials({
+              telegram: true,
+            })
+          
+
         a(href="#").header__logo
           img(src="./assets/images/icon-logo.svg", alt="Логотип.").header__logo-main
           img(src="./assets/images/icon-logo__text.svg", alt="Логотип.").header__logo-text
+          span Премиальный клуб
+
         div.header__user
+          a(href="#").request-call-sok.button-request.header__button Заказать звонок
+
           a(href="#" data-type='card' data-id='1').button-request.header__link.header__link--card 
             i
             span Купить карту
+
           a(href="#").header__link.header__link--profile
             svg(width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg")
               use(href='#icon-profile')

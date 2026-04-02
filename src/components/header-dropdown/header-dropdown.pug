@@ -1,8 +1,23 @@
 section.header-dropdown
   div.header-dropdown__wrapper
+
     a(href="#" data-type='card' data-id='1').button-request.header-dropdown__card 
       i
       span Купить карту
+
+    div.header-dropdown__contacts
+      a(href="tel:+78463131313").header-dropdown__link
+        i.header-dropdown__icon
+          svg(width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg")
+            use(href="#icon-call")
+        span +7 846 313-13-13
+
+      address.header-dropdown__link
+        i.header-dropdown__icon
+          svg(width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg")
+            use(href="#icon-pin")
+        span г. Самара, ул. Мичурина, 98      
+
     nav.header-dropdown__nav
       ul.header-dropdown__nav-list 
         li.header-dropdown__nav-item 
@@ -23,9 +38,12 @@ section.header-dropdown
           a(href="#").header-dropdown__nav-link Контакты
         li.header-dropdown__nav-item 
           a(href="#").header-dropdown__nav-link Вакансии
+
     div.header-dropdown__socials
       +socials({
-        ver2: true,
+        vk: true,
+        twitter: true,
+        youtube: true,
       })
 
   button(type='button').header-dropdown__burger

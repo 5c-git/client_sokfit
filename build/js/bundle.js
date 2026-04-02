@@ -832,6 +832,31 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ },
 
+/***/ 1457
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_svg_baker_runtime_browser_symbol_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2897);
+/* harmony import */ var _node_modules_svg_baker_runtime_browser_symbol_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_svg_baker_runtime_browser_symbol_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_svg_sprite_loader_runtime_browser_sprite_build_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5042);
+/* harmony import */ var _node_modules_svg_sprite_loader_runtime_browser_sprite_build_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_svg_sprite_loader_runtime_browser_sprite_build_js__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var symbol = new (_node_modules_svg_baker_runtime_browser_symbol_js__WEBPACK_IMPORTED_MODULE_0___default())({
+  "id": "icon-call",
+  "use": "icon-call-usage",
+  "viewBox": "0 0 18 18",
+  "content": "<symbol viewBox=\"0 0 18 18\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" id=\"icon-call\">\n<path d=\"M15.7228 12.3573V14.3896C15.7236 14.5783 15.685 14.765 15.6094 14.9379C15.5338 15.1108 15.4229 15.266 15.2839 15.3935C15.1449 15.521 14.9808 15.6181 14.802 15.6786C14.6233 15.739 14.4339 15.7615 14.246 15.7445C12.1615 15.518 10.1591 14.8057 8.3998 13.6648C6.76301 12.6247 5.3753 11.237 4.33521 9.6002C3.19034 7.83292 2.47786 5.8208 2.2555 3.72687C2.23857 3.53953 2.26083 3.35073 2.32087 3.17247C2.38091 2.99422 2.47741 2.83041 2.60422 2.69149C2.73103 2.55257 2.88538 2.44158 3.05744 2.36558C3.22949 2.28958 3.41549 2.25024 3.60359 2.25007H5.63588C5.96464 2.24683 6.28337 2.36325 6.53264 2.57763C6.78191 2.792 6.94473 3.08971 6.99074 3.41525C7.07652 4.06563 7.2356 4.70421 7.46495 5.31883C7.55609 5.5613 7.57582 5.82481 7.52179 6.07815C7.46776 6.33149 7.34224 6.56402 7.1601 6.74821L6.29976 7.60855C7.26413 9.30453 8.66837 10.7088 10.3644 11.6731L11.2247 10.8128C11.4089 10.6307 11.6414 10.5051 11.8948 10.4511C12.1481 10.3971 12.4116 10.4168 12.6541 10.508C13.2687 10.7373 13.9073 10.8964 14.5577 10.9822C14.8867 11.0286 15.1873 11.1943 15.4021 11.4479C15.6169 11.7014 15.7311 12.0251 15.7228 12.3573Z\" stroke-opacity=\"0.8\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n</symbol>"
+});
+var result = _node_modules_svg_sprite_loader_runtime_browser_sprite_build_js__WEBPACK_IMPORTED_MODULE_1___default().add(symbol);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("#" + symbol.id);
+
+/***/ },
+
 /***/ 1475
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -859,6 +884,31 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 
 
+
+/***/ },
+
+/***/ 1894
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_svg_baker_runtime_browser_symbol_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2897);
+/* harmony import */ var _node_modules_svg_baker_runtime_browser_symbol_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_svg_baker_runtime_browser_symbol_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_svg_sprite_loader_runtime_browser_sprite_build_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5042);
+/* harmony import */ var _node_modules_svg_sprite_loader_runtime_browser_sprite_build_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_svg_sprite_loader_runtime_browser_sprite_build_js__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var symbol = new (_node_modules_svg_baker_runtime_browser_symbol_js__WEBPACK_IMPORTED_MODULE_0___default())({
+  "id": "icon-pin",
+  "use": "icon-pin-usage",
+  "viewBox": "0 0 24 24",
+  "content": "<symbol viewBox=\"0 0 24 24\" stroke=\"none\" xmlns=\"http://www.w3.org/2000/svg\" id=\"icon-pin\">\r\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 2.66663C10.0109 2.66663 8.10322 3.4568 6.6967 4.86333C5.29018 6.26985 4.5 8.1775 4.5 10.1666C4.5 13.0735 6.3868 15.8698 8.41946 18.0154C9.42046 19.072 10.424 19.9364 11.1781 20.5369C11.5082 20.7998 11.7893 21.0111 12 21.165C12.2107 21.0111 12.4918 20.7998 12.8219 20.5369C13.576 19.9364 14.5795 19.072 15.5805 18.0154C17.6132 15.8698 19.5 13.0735 19.5 10.1666C19.5 8.1775 18.7098 6.26985 17.3033 4.86333C15.8968 3.4568 13.9891 2.66663 12 2.66663ZM12 22.0833C11.584 22.7073 11.5838 22.7072 11.5836 22.7071L11.5812 22.7054L11.5753 22.7015L11.5549 22.6877C11.5375 22.6759 11.5125 22.6588 11.4803 22.6365C11.4161 22.592 11.3234 22.527 11.2064 22.4424C10.9724 22.2735 10.6407 22.0265 10.2437 21.7104C9.451 21.0791 8.39204 20.1675 7.33054 19.047C5.2382 16.8384 3 13.6764 3 10.1666C3 7.77968 3.94821 5.49049 5.63604 3.80267C7.32387 2.11484 9.61305 1.16663 12 1.16663C14.3869 1.16663 16.6761 2.11484 18.364 3.80267C20.0518 5.49049 21 7.77968 21 10.1666C21 13.6764 18.7618 16.8384 16.6695 19.047C15.608 20.1675 14.549 21.0791 13.7563 21.7104C13.3593 22.0265 13.0276 22.2735 12.7936 22.4424C12.6766 22.527 12.5839 22.592 12.5197 22.6365C12.4875 22.6588 12.4625 22.6759 12.4451 22.6877L12.4247 22.7015L12.4188 22.7054L12.4171 22.7066C12.4168 22.7068 12.416 22.7073 12 22.0833ZM12 22.0833L12.416 22.7073C12.1641 22.8753 11.8355 22.875 11.5836 22.7071L12 22.0833ZM12 8.16663C10.8954 8.16663 10 9.06206 10 10.1666C10 11.2712 10.8954 12.1666 12 12.1666C13.1046 12.1666 14 11.2712 14 10.1666C14 9.06206 13.1046 8.16663 12 8.16663ZM8.5 10.1666C8.5 8.23363 10.067 6.66663 12 6.66663C13.933 6.66663 15.5 8.23363 15.5 10.1666C15.5 12.0996 13.933 13.6666 12 13.6666C10.067 13.6666 8.5 12.0996 8.5 10.1666Z\" />\r\n</symbol>"
+});
+var result = _node_modules_svg_sprite_loader_runtime_browser_sprite_build_js__WEBPACK_IMPORTED_MODULE_1___default().add(symbol);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("#" + symbol.id);
 
 /***/ },
 
@@ -1698,7 +1748,9 @@ if (breadcrumbs) {
 var map = {
 	"./icon-5corners.svg": 2640,
 	"./icon-add-file.svg": 2181,
+	"./icon-call.svg": 1457,
 	"./icon-copy.svg": 1366,
+	"./icon-pin.svg": 1894,
 	"./icon-profile.svg": 3228,
 	"./icon-social__link.svg": 1926,
 	"./icon-social__telegram.svg": 6879,
@@ -1711,7 +1763,9 @@ var map = {
 	"./pagination-arrow-right.svg": 2546,
 	"assets/icons/icon-5corners.svg": 2640,
 	"assets/icons/icon-add-file.svg": 2181,
+	"assets/icons/icon-call.svg": 1457,
 	"assets/icons/icon-copy.svg": 1366,
+	"assets/icons/icon-pin.svg": 1894,
 	"assets/icons/icon-profile.svg": 3228,
 	"assets/icons/icon-social__link.svg": 1926,
 	"assets/icons/icon-social__telegram.svg": 6879,
@@ -1859,6 +1913,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+const bouncerInstances = /* @__PURE__ */ new WeakMap();
 const validationMessages = {
   missingValue: {
     default: "\u041F\u043E\u043B\u0435 \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u043E \u0434\u043B\u044F \u0437\u0430\u043F\u043E\u043B\u043D\u0435\u043D\u0438\u044F!",
@@ -1908,6 +1963,8 @@ const validateByRegexp = (field, regexp, min = 0, max = 225) => {
 };
 const validateForm = (form) => {
   const formEl = document.querySelector(form);
+  const existing = bouncerInstances.get(formEl);
+  if (existing) return existing;
   let validator = new (formbouncerjs__WEBPACK_IMPORTED_MODULE_1___default())(form, {
     fieldClass: "validator__input--error",
     errorClass: "validator__error",
@@ -2038,14 +2095,26 @@ const validateForm = (form) => {
   });
   return validator;
 };
-const maskPhone = (form) => {
+const maskPhone = (target) => {
   const mask = new (inputmask__WEBPACK_IMPORTED_MODULE_0___default())("+7 [(999) 999-99-99]", {
     autoUnmask: true,
     showMaskOnHover: false,
     showMaskOnFocus: false,
     placeholder: ""
   });
-  document.querySelector(form).querySelectorAll(".validator__phone").forEach((field) => mask.mask(field));
+  let containers = [];
+  if (typeof target === "string") {
+    containers = document.querySelectorAll(target);
+  } else if (target instanceof Element) {
+    containers = [target];
+  } else if (target instanceof NodeList || Array.isArray(target)) {
+    containers = [...target];
+  } else {
+    return;
+  }
+  containers.forEach((container) => {
+    container.querySelectorAll(".validator__phone").forEach((field) => mask.mask(field));
+  });
 };
 const maskInternationalPhone = (form) => {
   const hashContainer = document.querySelector(`${form}`);
@@ -2640,6 +2709,7 @@ __webpack_require__.r(__webpack_exports__);
 const form = document.querySelector(".request__form");
 if (form) {
   (0,_validator_validator__WEBPACK_IMPORTED_MODULE_0__.validateForm)(".request__form");
+  (0,_validator_validator__WEBPACK_IMPORTED_MODULE_0__.maskPhone)(form);
 }
 
 
@@ -3625,6 +3695,100 @@ __webpack_require__.r(__webpack_exports__);
 
 const POPUP_IGNORE_CLASSES = ["cookie", "modal-zone-info"];
 const body = document.querySelector("body");
+const buildPopupSelector = () => {
+  const exclude = POPUP_IGNORE_CLASSES.map((cls) => `:not(.${cls})`).join("");
+  return `.popUp${exclude}`;
+};
+const hasOpenedBlockingPopups = () => document.querySelector(buildPopupSelector());
+const finalizeClosePopup = ({
+  popup,
+  blockScroll = true,
+  redirect,
+  onPopupEscPress
+}) => {
+  if (!popup) return;
+  popup.remove();
+  if (blockScroll && !hasOpenedBlockingPopups()) {
+    (0,_utils_utils__WEBPACK_IMPORTED_MODULE_0__/* .getPaddingFromBody */ .iW)();
+  }
+  if (onPopupEscPress) {
+    document.removeEventListener("keydown", onPopupEscPress);
+  }
+  if (redirect) {
+    setTimeout(() => {
+      window.location.href = redirect;
+    }, 300);
+  }
+};
+const animatePopupIn = (popup) => {
+  const container = popup.querySelector(".popUp__container");
+  if (!container) return;
+  popup.classList.add("popUp--active");
+  container.classList.add("popUp__container--in");
+  container.addEventListener(
+    "animationend",
+    (evt) => {
+      if (evt.target !== container) return;
+      container.classList.remove("popUp__container--in");
+    },
+    { once: true }
+  );
+};
+const animatePopupOut = ({
+  popup,
+  blockScroll = true,
+  redirect,
+  onPopupEscPress
+}) => {
+  if (!popup) return;
+  if (popup.dataset.popupClosing === "true") return;
+  popup.dataset.popupClosing = "true";
+  const container = popup.querySelector(".popUp__container");
+  if (!container) {
+    finalizeClosePopup({
+      popup,
+      blockScroll,
+      redirect,
+      onPopupEscPress
+    });
+    return;
+  }
+  container.classList.remove("popUp__container--in");
+  container.classList.add("popUp__container--out");
+  let isFinished = false;
+  const done = () => {
+    if (isFinished) return;
+    isFinished = true;
+    container.classList.remove("popUp__container--out");
+    finalizeClosePopup({
+      popup,
+      blockScroll,
+      redirect,
+      onPopupEscPress
+    });
+  };
+  container.addEventListener(
+    "animationend",
+    (evt) => {
+      if (evt.target !== container) return;
+      done();
+    },
+    { once: true }
+  );
+  requestAnimationFrame(() => {
+    const styles = window.getComputedStyle(container);
+    const durations = styles.animationDuration.split(",").map(parseFloat);
+    const delays = styles.animationDelay.split(",").map(parseFloat);
+    const maxDuration = Math.max(...durations, 0);
+    const maxDelay = Math.max(...delays, 0);
+    const totalTime = (maxDuration + maxDelay) * 1e3;
+    if (totalTime === 0) {
+      done();
+    } else {
+      setTimeout(done, totalTime + 50);
+    }
+  });
+};
 const openPopup = (options) => {
   const {
     template,
@@ -3655,23 +3819,21 @@ const openPopup = (options) => {
     return;
   }
   body.append(popup);
+  if (blockScroll) {
+    (0,_utils_utils__WEBPACK_IMPORTED_MODULE_0__/* .getPaddingOnBody */ .rP)();
+  }
+  requestAnimationFrame(() => {
+    animatePopupIn(popup);
+  });
   const overlayEl = popup.querySelector(".popUp__overlay");
   const closes = popup.querySelectorAll(".popUp__close");
-  function buildPopupSelector() {
-    const exclude = POPUP_IGNORE_CLASSES.map((cls) => `:not(.${cls})`).join("");
-    return `.popUp${exclude}`;
-  }
   function closePopup() {
-    popup.remove();
-    if (blockScroll && !document.querySelector(buildPopupSelector())) {
-      (0,_utils_utils__WEBPACK_IMPORTED_MODULE_0__/* .getPaddingFromBody */ .iW)();
-    }
-    document.removeEventListener("keydown", onPopupEscPress);
-    if (redirect) {
-      setTimeout(() => {
-        window.location.href = redirect;
-      }, 300);
-    }
+    animatePopupOut({
+      popup,
+      blockScroll,
+      redirect,
+      onPopupEscPress
+    });
   }
   function onPopupEscPress(evt) {
     if (!esc.closeOnEsc) return;
@@ -3679,7 +3841,6 @@ const openPopup = (options) => {
     evt.preventDefault();
     closePopup();
   }
-  if (blockScroll) (0,_utils_utils__WEBPACK_IMPORTED_MODULE_0__/* .getPaddingOnBody */ .rP)();
   if (overlayEl) {
     if (overlay.use && overlay.closeOnClick) {
       overlayEl.addEventListener("click", closePopup);
@@ -3691,6 +3852,12 @@ const openPopup = (options) => {
   if (esc.closeOnEsc) {
     document.addEventListener("keydown", onPopupEscPress);
   }
+  popup._popupMeta = {
+    blockScroll,
+    redirect,
+    onPopupEscPress
+  };
+  return popup;
 };
 const summonPopUp = (arg1, arg2, arg3) => {
   if (typeof arg1 === "object" && arg1 !== null) {
@@ -3710,18 +3877,19 @@ const summonPopUp = (arg1, arg2, arg3) => {
       console.warn("\u041D\u0435 \u043F\u0435\u0440\u0435\u0434\u0430\u043D template \u0434\u043B\u044F \u043C\u043E\u0434\u0430\u043B\u043A\u0438");
       return;
     }
-    openPopup({
+    return openPopup({
       template,
       blockScroll,
       redirect,
       overlay,
       esc
     });
-  } else if (typeof arg1 === "string") {
+  }
+  if (typeof arg1 === "string") {
     const template = arg1;
     const blockScroll = arg2 !== void 0 ? arg2 : true;
     const redirect = arg3;
-    openPopup({
+    return openPopup({
       template,
       blockScroll,
       redirect,
@@ -3733,11 +3901,11 @@ const summonPopUp = (arg1, arg2, arg3) => {
         closeOnEsc: true
       }
     });
-  } else {
-    console.warn("\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0430\u0440\u0433\u0443\u043C\u0435\u043D\u0442\u044B \u0434\u043B\u044F summonPopUp");
   }
+  console.warn("\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0430\u0440\u0433\u0443\u043C\u0435\u043D\u0442\u044B \u0434\u043B\u044F summonPopUp");
 };
 const removePopUp = (arg, forceBlockScroll = true) => {
+  var _a, _b;
   if (!arg) return;
   let popup = null;
   let blockScroll = forceBlockScroll;
@@ -3749,20 +3917,20 @@ const removePopUp = (arg, forceBlockScroll = true) => {
     if (arg.template) {
       const popUpName = arg.template.replace(/^[#.]/, "");
       popup = document.querySelector(`.${popUpName}`);
+    } else if (arg instanceof Element) {
+      popup = arg.closest(".popUp") || arg;
     }
     if (arg.blockScroll !== void 0) blockScroll = arg.blockScroll;
     if (arg.redirect) redirect = arg.redirect;
   }
   if (!popup) return;
-  popup.remove();
-  if (blockScroll) {
-    (0,_utils_utils__WEBPACK_IMPORTED_MODULE_0__/* .getPaddingFromBody */ .iW)();
-  }
-  if (redirect) {
-    setTimeout(() => {
-      window.location.href = redirect;
-    }, 300);
-  }
+  const meta = popup._popupMeta || {};
+  animatePopupOut({
+    popup,
+    blockScroll: (_a = meta.blockScroll) != null ? _a : blockScroll,
+    redirect: (_b = meta.redirect) != null ? _b : redirect,
+    onPopupEscPress: meta.onPopupEscPress
+  });
 };
 
 

@@ -5,13 +5,14 @@ mixin request-wrapper(props)
 
   div.request-wrapper
 
-    div.request-wrapper__media
-      if props.slider
+    if props.slider
+      div.request-wrapper__media
         +slider({
           autoplay: true,
           banner: true,
         })
-      if props.banner
+    if props.banner
+      div.request-wrapper__media
         figure 
           img(src="./assets/images/image-4.jpg", alt="")
 

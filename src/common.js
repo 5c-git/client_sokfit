@@ -9,7 +9,7 @@ window.Corners5ProjectLayout.activateRequestButtons({
       return $.ajax({
         type: 'POST',
         data: fd,
-        url: 'https://run.mocky.io/v3/ef8a4488-31a2-4d52-a983-a4ab6ad36107?mocky-delay=4000ms',
+        url: '/local/ajax/form.php',
         processData: false,
         contentType: false,
         success(data) {
@@ -29,4 +29,33 @@ window.Corners5ProjectLayout.activateRequestButtons({
       });
     }
   },
+});
+
+const requestForms = document.querySelectorAll('.request__form');
+requestForms.forEach((form) => {
+
+  form.addEventListener('bouncerFormInvalid', (evt) => {
+    console.log(form);
+    console.log('Форма не валидна.');
+  });
+
+  form.addEventListener('bouncerFormValid', () => {
+    console.log('Форма валидна.');
+
+    const fd = new FormData(form);
+
+    return $.ajax({
+      type: 'POST',
+      data: fd,
+      url: 'https://run.mocky.io/v3/59531f4b-6f78-43cb-9acc-766963fe2512',
+      contentType: false,
+      processData: false,
+      cache: false,
+      async: false,
+      dataType: 'json',
+      success() {
+        form.reset();
+      },
+    });
+  });
 });
