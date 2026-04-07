@@ -50,6 +50,9 @@ const sliderInit = (container) => {
     }
     : {};
 
+  console.log(slider);
+  console.log(autoplayConfig);
+
   const swiperNolint = new Swiper(swiper, {
     modules: [Navigation, Scrollbar, EffectFade, Autoplay],
     slidesPerView: 'auto',

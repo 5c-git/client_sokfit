@@ -2416,6 +2416,8 @@ const sliderInit = (container) => {
       pauseOnMouseEnter: true
     }
   } : {};
+  console.log(slider);
+  console.log(autoplayConfig);
   const swiperNolint = new swiper__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A(swiper, __spreadProps(__spreadValues(__spreadValues({
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__/* .Navigation */ .Vx, swiper_modules__WEBPACK_IMPORTED_MODULE_1__/* .Scrollbar */ .Ze, swiper_modules__WEBPACK_IMPORTED_MODULE_1__/* .EffectFade */ ._R, swiper_modules__WEBPACK_IMPORTED_MODULE_1__/* .Autoplay */ .Ij],
     slidesPerView: "auto",
