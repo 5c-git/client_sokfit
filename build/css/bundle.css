@@ -6303,24 +6303,6 @@ footer:not(.footer) {
 }
 .modal .request__title {
   padding-right: 40px;
-  transition: opacity 0.2s ease 0.3s, transform 0.2s ease 0.3s;
-  opacity: 0;
-  transform: translateY(-20px);
-}
-@media (max-width: 991px) {
-  .modal .request__title {
-    transform: unset;
-  }
-}
-.modal .request__form {
-  transition: opacity 0.2s ease 0.1s, transform 0.2s ease 0.1s;
-  opacity: 0;
-  transform: translateY(-20px);
-}
-@media (max-width: 991px) {
-  .modal .request__form {
-    transform: unset;
-  }
 }
 .modal .review-card,
 .modal .zone-card {
@@ -6476,6 +6458,26 @@ footer:not(.footer) {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+.modal--slide .request__title {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.2s ease 0.3s, transform 0.2s ease 0.3s;
+}
+@media (max-width: 991px) {
+  .modal--slide .request__title {
+    transform: unset;
+  }
+}
+.modal--slide .request__form {
+  transition: opacity 0.2s ease 0.1s, transform 0.2s ease 0.1s;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+@media (max-width: 991px) {
+  .modal--slide .request__form {
+    transform: unset;
+  }
 }
 .modal--slide .popUp__container--in {
   animation: modal-in 0.3s;

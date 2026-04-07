@@ -15,27 +15,6 @@
   .request {
     &__title {
       padding-right: 40px;
-      transition:
-        opacity 0.2s ease 0.3s,
-        transform 0.2s ease 0.3s;
-      opacity: 0;
-      transform: translateY(-20px);
-
-      @media(max-width: $tablet) {
-        transform: unset;
-      }
-    }
-
-    &__form {
-      transition:
-        opacity 0.2s ease 0.1s,
-        transform 0.2s ease 0.1s;
-      opacity: 0;
-      transform: translateY(-20px);
-
-      @media(max-width: $tablet) {
-        transform: unset;
-      }
     }
   }
 
@@ -184,6 +163,33 @@
     opacity: 0;
     pointer-events: none;
 
+
+
+    .request {
+      &__title {
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.2s ease 0.3s,
+          transform 0.2s ease 0.3s;
+
+        @media(max-width: $tablet) {
+          transform: unset;
+        }
+      }
+
+      &__form {
+        transition:
+          opacity 0.2s ease 0.1s,
+          transform 0.2s ease 0.1s;
+        opacity: 0;
+        transform: translateY(-20px);
+
+        @media(max-width: $tablet) {
+          transform: unset;
+        }
+      }
+    }
+
     .popUp {
 
       &__container {
@@ -217,7 +223,6 @@
           .request__title {
             opacity: 0 !important;
             transform: translateY(-20px) !important;
-            // transition-delay: 0.3s !important;
             transition-delay: unset !important;
 
             @media(max-width: $tablet) {
@@ -228,7 +233,6 @@
           .request__form {
             opacity: 0 !important;
             transform: translateY(-20px) !important;
-            // transition-delay: 0.1s !important;
             transition-delay: unset !important;
 
             @media(max-width: $tablet) {
